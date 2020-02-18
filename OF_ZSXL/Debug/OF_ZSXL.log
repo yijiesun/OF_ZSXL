@@ -1,0 +1,9 @@
+﻿  optical_flow.cpp
+e:\simit\2020_new_project\zsxl\of_zsxl\of_zsxl\functions\optical_flow.cpp(74): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\of_zsxl\functions\optical_flow.cpp(75): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\of_zsxl\functions\optical_flow.cpp(81): warning C4018: “<”: 有符号/无符号不匹配
+e:\simit\2020_new_project\zsxl\of_zsxl\of_zsxl\functions\optical_flow.cpp(82): warning C4018: “<”: 有符号/无符号不匹配
+e:\simit\2020_new_project\zsxl\of_zsxl\of_zsxl\functions\optical_flow.cpp(94): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\of_zsxl\functions\optical_flow.cpp(137): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+  OF_ZSXL.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Debug\OF_ZSXL.exe
+  OF_ZSXL.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Debug\OF_ZSXL.pdb (Partial PDB)
