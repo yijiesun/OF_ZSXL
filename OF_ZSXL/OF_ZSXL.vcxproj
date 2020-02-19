@@ -74,7 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\opencv2_4_13\opencv\build\include;C:\opencv2_4_13\opencv\build\include\opencv;C:\opencv2_4_13\opencv\build\include\opencv2;E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\OF_ZSXL\functions;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\opencv2_4_13\opencv\build\include;C:\opencv2_4_13\opencv\build\include\opencv;C:\opencv2_4_13\opencv\build\include\opencv2;E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\OF_ZSXL\functions;E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\opencv2_4_13\opencv\build\x86\vc12\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -115,12 +115,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cv_draw.cpp" />
+    <ClCompile Include="..\include\functions.cpp" />
+    <ClCompile Include="..\include\putText.cpp" />
     <ClCompile Include="functions\optical_flow.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="functions\include.h" />
+    <ClInclude Include="..\include\include.h" />
+    <ClInclude Include="..\include\putText.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

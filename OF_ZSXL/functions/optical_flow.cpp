@@ -9,17 +9,20 @@
 #include <string>
 using namespace std;
 using namespace cv;
-
+#define DRAW_TRACK
 #define MAX_CORNERS 1000
 #define FLOW_DENSITY 5
 #define SET_POINT_NUM 4
 #define MIN_FLOW_TENSOR 1.0f
 #define ARROW_LENGTH 50.0f
 #define MOTION_POINT_BIAS 10.0f
+#define MAX_TRACK_DIS 5.0f  // 1/5 of img width
 Mat src;
 Mat dst;
+Mat track_line;
 Mat mask;
 int point_num;
+Point track_priv_cur[2];
 Point cur_pt[SET_POINT_NUM];
 Point cur_pt_lu_rd[SET_POINT_NUM/2];
 //视频opticalFlowFarnebackProcess类，继承自帧处理基类
@@ -54,7 +57,6 @@ public:
 		//稠密光流
 		Mat flow,flow_map[2], flowsum, flowsum_tmp;
 		calcOpticalFlowFarneback(gray_prev_roi, gray_roi, flow, 0.5, 3, 15, 3, 5, 1.2, 0);
-		cout << flow.size() << endl;  //对原图像每个像素都计算光流
 		Mat flow_xy[2],absflow_xy[2];  // 声明Mat数组，共3个元素，存放分离后的通道
 
 		split(flow, flow_xy);
@@ -64,10 +66,11 @@ public:
 		absflow_xy[1].convertTo(flow_map[1], CV_8U);
 		flowsum = flow_map[0] + flow_map[1];
 		flowsum_tmp = flowsum - MIN_FLOW_TENSOR;
+		//flowsum_tmp = flowsum - 1.0f;
 		int flow_non_zero_cnt = countNonZero(flowsum_tmp);
 
 		threshold(flowsum, flowsum, MIN_FLOW_TENSOR, 255, CV_THRESH_BINARY);
-		
+		//threshold(flowsum, flowsum, 1.0f, 255, CV_THRESH_BINARY);
 
 		Moments moment = moments(flowsum, true);
 		Scalar  flow_sum = sum(flow);
@@ -89,10 +92,29 @@ public:
 		{
 			int x = cvRound(moment.m10 / moment.m00);//计算重心横坐标
 			int y = cvRound(moment.m01 / moment.m00);//计算重心纵坐标
+			if (track_priv_cur[0].x == -1 && track_priv_cur[0].y == -1)
+			{
+				track_priv_cur[1] = Point(x + cur_pt_lu_rd[0].x, y + cur_pt_lu_rd[0].y);
+				track_priv_cur[0] = track_priv_cur[1];
+			}
+				track_priv_cur[1] = Point(x + cur_pt_lu_rd[0].x, y + cur_pt_lu_rd[0].y);
+			if (getDistance(track_priv_cur[0], track_priv_cur[1]) > gray_prev_roi.cols / MAX_TRACK_DIS)
+				track_priv_cur[1] = track_priv_cur[0];
+
+#ifdef DRAW_TRACK
+			line(track_line, track_priv_cur[0], track_priv_cur[1], CV_RGB(155, 155, 0), 1, 8);
+#endif
 			circle(output, Point(x + cur_pt_lu_rd[0].x, y + cur_pt_lu_rd[0].y), 5, CV_RGB(255, 0, 0));
 			arrowedLine(output, Point(x + cur_pt_lu_rd[0].x, y + cur_pt_lu_rd[0].y), Point(cvRound(x + flow_sum[0] + cur_pt_lu_rd[0].x),
 				y + flow_sum[1] + cur_pt_lu_rd[0].y), CV_RGB(255, 0, 0), 2, 8);
+
+			
+			track_priv_cur[0] = track_priv_cur[1];
+
 		}
+#ifdef DRAW_TRACK
+		output += track_line;
+#endif
 		Mat mask_roi_t;
 		mask_roi_t = mask_roi- 230;
 		cvtColor(mask_roi_t, mask_roi_t, COLOR_GRAY2RGB);
@@ -130,8 +152,9 @@ void process()
 	VideoProcessor processor;
 	OF_Farneback of_fb;
 	//打开输入视频
-	processor.setInput("F:\\video_dataset\\test0.avi");
-	//processor.setOutput("E:\\SIMIT\\2020_new_project\\zsxl\\dataset\\result\\Farneback0.avi");
+	//processor.setInput("F:\\video_dataset\\test1.avi");
+	processor.setInput("E:\\SIMIT\\2020_new_project\\zsxl\\dataset\\fgq.avi");
+	processor.setOutput("E:\\SIMIT\\2020_new_project\\zsxl\\dataset\\result\\OF_ZSXL_FGQ.avi");
 	processor.displayOutput("rlt");
 	//设置每一帧的延时
 	processor.setDelay(1000. / processor.getFrameRate());
@@ -141,7 +164,8 @@ void process()
 	processor.readNextFrame(src,false);
 	src.copyTo(dst);
 	mask = Mat::zeros(src.size(), CV_8UC1);
-
+	track_line = Mat::zeros(src.size(), CV_8UC3);
+	track_priv_cur[0] = Point(-1, -1);
 	while (1)
 	{
 		int key = waitKey(10);
@@ -155,6 +179,7 @@ void process()
 		}
 			
 	}
+	quadrilateralVertexSort(cur_pt);
 	std::vector<cv::Point > contour;
 	contour.reserve(4);
 	contour.push_back(cur_pt[0]);
