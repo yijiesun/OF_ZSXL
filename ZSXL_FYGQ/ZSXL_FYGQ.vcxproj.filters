@@ -27,10 +27,10 @@
     <ClCompile Include="..\include\putText.cpp">
       <Filter>资源文件</Filter>
     </ClCompile>
-    <ClCompile Include="functions\PROCESS_FYGQ_TEST.cpp">
+    <ClCompile Include="..\process\PROCESS_FYGQ.cpp">
       <Filter>源文件\functions</Filter>
     </ClCompile>
-    <ClCompile Include="..\include\PROCESS_MAIN.cpp">
+    <ClCompile Include="..\process\PROCESS_MAIN.cpp">
       <Filter>源文件\functions</Filter>
     </ClCompile>
   </ItemGroup>

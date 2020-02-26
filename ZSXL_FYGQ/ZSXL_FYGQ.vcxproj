@@ -20,9 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\include\functions.cpp" />
-    <ClCompile Include="..\include\PROCESS_MAIN.cpp" />
     <ClCompile Include="..\include\putText.cpp" />
-    <ClCompile Include="functions\PROCESS_FYGQ_TEST.cpp" />
+    <ClCompile Include="..\process\PROCESS_FYGQ.cpp" />
+    <ClCompile Include="..\process\PROCESS_MAIN.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
