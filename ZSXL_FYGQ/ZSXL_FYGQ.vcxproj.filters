@@ -21,14 +21,17 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="functions\optical_flow.cpp">
-      <Filter>源文件\functions</Filter>
-    </ClCompile>
     <ClCompile Include="..\include\functions.cpp">
       <Filter>资源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\include\putText.cpp">
       <Filter>资源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="functions\PROCESS_FYGQ_TEST.cpp">
+      <Filter>源文件\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\PROCESS_MAIN.cpp">
+      <Filter>源文件\functions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +39,9 @@
       <Filter>资源文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\putText.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\functions.h">
       <Filter>资源文件</Filter>
     </ClInclude>
   </ItemGroup>

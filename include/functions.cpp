@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 #include<sstream>
+#include "functions.h"
+
 using namespace cv;
 using namespace std;
 double getDistance(Point pointO, Point pointA)

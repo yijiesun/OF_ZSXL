@@ -15,7 +15,7 @@ functions\optical_flow.cpp(267): warning C4244: “参数”: 从“double”转
   正在生成代码
   1 of 492 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    16 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   ZSXL_FYGQ.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Release\ZSXL_FYGQ.exe
   ZSXL_FYGQ.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Release\ZSXL_FYGQ.pdb (Full PDB)

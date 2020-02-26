@@ -2,6 +2,6 @@
 int main(int argc, char* argv[])
 {
 	//vid_opticalFlowFarnebackProcess();
-	process();
+	RUN_FYGQ();
 	return 0;
 }

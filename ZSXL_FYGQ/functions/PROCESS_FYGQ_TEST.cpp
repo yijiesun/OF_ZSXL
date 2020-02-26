@@ -13,34 +13,34 @@ using namespace cv;
 #define DRAW_TRACK
 #define MAX_CORNERS 1000
 #define FLOW_DENSITY 5
-#define SET_POINT_NUM 4
 #define MIN_FLOW_TENSOR 2.0f
 #define ARROW_LENGTH 50.0f
 #define MOTION_POINT_PER 1.0f //计算质心光流矢量时的最少光流数量  img size/MOTION_POINT_BIAS
 #define MAX_TRACK_DIS 5.0f  // 1/5 of img width
 #define CONTINUES_FRAME_GOAL 5//A窗口连续多少帧出现向下的矢量，则检测B窗口
-int status;//0-innit；1-检测A窗口；2-检测B窗口；3-成功；4-失败
-int arrow_down_cnt;//矢量向下帧数计；
-Mat src;
-Mat dst;
-Mat track_line;
-Mat mask;
-int roi_area_size;
-int point_num;
-Point track_priv_cur[2];
-Point cur_pt[SET_POINT_NUM];
-Point cur_pt_lu_rd[3];
-Point LU_POINT;
-Point RU_POINT;
-Point LC_POINT;
-Point RC_POINT;
+
 //视频opticalFlowFarnebackProcess类，继承自帧处理基类
-class OF_Farneback : public FrameProcessor {
+class PROCESS_FYGQ : public FrameProcessor {
+public:
+	int status;//0-innit；1-检测A窗口；2-检测B窗口；3-成功；4-失败
+	int arrow_down_cnt;//矢量向下帧数计
+	Mat firstFrame;
+	Mat firstFrameDraw;
+	Mat track_line;
+	Mat mask;
+	int roi_area_size;
+	int point_num;
+	Point track_priv_cur[2];
+    Point cur_pt[4];
+	Point cur_pt_lu_rd[3];
+	Point LU_POINT;
+	Point RU_POINT;
+	Point LC_POINT;
+	Point RC_POINT;
 	Mat gray,gray_roi, mask_roi;  //当前灰度图
 	Mat gray_prev, gray_prev_roi, output_roi;  //之前的灰度图
 
-public:
-	OF_Farneback() {}
+	PROCESS_FYGQ() {}
 	void process(Mat &frame, Mat &output) {
 		//得到灰度图
 		cvtColor(frame, gray, CV_BGR2GRAY);
@@ -209,7 +209,7 @@ public:
 		else if (status == 3)
 		{
 			string txt2 = "红色A窗口检测成功";
-			string txt3 = "红色B窗口检测成功";
+			string txt3 = "蓝色B窗口检测成功";
 			string txt4 = "成绩合格！";
 			putTextZH(output, txt2.c_str(), Point(20, 120), CV_RGB(0, 255, 0), 30, "华文正楷");
 			putTextZH(output, txt3.c_str(), Point(20, 160), CV_RGB(0, 255, 0), 30, "华文正楷");
@@ -229,35 +229,97 @@ public:
 
 	}
 
-};
-
-void on_mouse(int event, int x, int y, int flags, void* ustc)
-{
-	if (event == CV_EVENT_LBUTTONUP)
+	//将opencv的mouse回调函数放在类里面
+	static void onMouse(int event, int x, int y, int, void* userdata)
 	{
-		dst.copyTo(src);
-		cur_pt[int(point_num%SET_POINT_NUM)] = Point(x, y);
-		
-		for (int i = 0; i < SET_POINT_NUM; i++)
+		// Check for null pointer in userdata and handle the error
+		PROCESS_FYGQ* temp = reinterpret_cast<PROCESS_FYGQ*>(userdata);
+		temp->on_Mouse(event, x, y);
+	}
+
+	void on_Mouse(int event, int x, int y)
+	{
+		if (event == CV_EVENT_LBUTTONUP)
 		{
-			char temp_1[20];
-			sprintf_s(temp_1, " %d,%d", cur_pt[i].x, cur_pt[i].y);
-			putText(src, temp_1, cur_pt[i], FONT_HERSHEY_SIMPLEX, 0.4, Scalar(0, 255, 255));
-			circle(src, cur_pt[i], 3, cvScalar(255, 0, 0), CV_FILLED, CV_AA, 0);
+			firstFrame.copyTo(firstFrameDraw);
+			cur_pt[int(point_num%4)] = Point(x, y);
+
+			for (int i = 0; i < 4; i++)
+			{
+				char temp_1[20];
+				sprintf_s(temp_1, " %d,%d", cur_pt[i].x, cur_pt[i].y);
+				putText(firstFrameDraw, temp_1, cur_pt[i], FONT_HERSHEY_SIMPLEX, 0.4, Scalar(0, 255, 255));
+				circle(firstFrameDraw, cur_pt[i], 3, cvScalar(255, 0, 0), CV_FILLED, CV_AA, 0);
+			}
+
+			imshow("rlt", firstFrameDraw);
+			point_num++;
+		}
+	}
+
+	void setup(Mat &frame)
+	{
+		arrow_down_cnt = 0;
+		status = 0;
+		point_num = 0;
+		frame.copyTo(firstFrame);
+
+		mask = Mat::zeros(firstFrame.size(), CV_8UC1);
+		track_line = Mat::zeros(firstFrame.size(), CV_8UC3);
+		track_priv_cur[0] = Point(-1, -1);
+
+		imshow("rlt", firstFrame);
+
+		while (1)
+		{
+			int key = waitKey(10);
+			setMouseCallback("rlt", onMouse, this);
+			if (key == 13 || key == 'q')
+			{
+				break;
+			}
+
 		}
 
-		imshow("rlt", src);
-		point_num++;
+		cout << "ROI:" << cur_pt[3].x - cur_pt[0].x << endl;
+		quadrilateralVertexSort(cur_pt);
+		LC_POINT.x = min(cur_pt[0].x, cur_pt[1].x) + cvRound(abs(cur_pt[0].x - cur_pt[1].x) / 2.0);
+		LC_POINT.y = min(cur_pt[0].y, cur_pt[1].y) + cvRound(abs(cur_pt[0].y - cur_pt[1].y) / 2.0);
+		RC_POINT.x = min(cur_pt[2].x, cur_pt[3].x) + cvRound(abs(cur_pt[2].x - cur_pt[3].x) / 2.0);
+		RC_POINT.y = min(cur_pt[2].y, cur_pt[3].y) + cvRound(abs(cur_pt[2].y - cur_pt[3].y) / 2.0);
+		findExtendPointOfLine(LC_POINT, cur_pt[0], LU_POINT);
+		findExtendPointOfLine(RC_POINT, cur_pt[3], RU_POINT);
+		std::vector<cv::Point > contour;
+		contour.reserve(4);
+		contour.push_back(LU_POINT);
+		contour.push_back(LC_POINT);
+		contour.push_back(RC_POINT);
+		contour.push_back(RU_POINT);
+		std::vector<std::vector<cv::Point >> contours;
+		contours.push_back(contour);
+		cv::fillPoly(mask, contours, 255);
+
+		roi_area_size = countNonZero(mask);
+
+		cur_pt_lu_rd[0].x = min4(LU_POINT.x, cur_pt[0].x, cur_pt[3].x, RU_POINT.x);
+		cur_pt_lu_rd[1].x = max4(LU_POINT.x, cur_pt[0].x, cur_pt[3].x, RU_POINT.x);
+		cur_pt_lu_rd[0].y = min4(LU_POINT.y, cur_pt[0].y, cur_pt[3].y, RU_POINT.y);
+		cur_pt_lu_rd[1].y = max4(LU_POINT.y, cur_pt[0].y, cur_pt[3].y, RU_POINT.y);
+
+		cur_pt_lu_rd[2].x = max4(cur_pt_lu_rd[1].x, cur_pt[1].x, cur_pt[2].x, cur_pt[3].x);
+		cur_pt_lu_rd[2].y = max4(cur_pt_lu_rd[1].y, cur_pt[1].y, cur_pt[2].y, cur_pt[3].y);
+		status = 1;
 	}
-}
-void process()
+
+
+};
+
+
+void RUN_FYGQ()
 {
-	arrow_down_cnt = 0;
-	status = 0;
-	point_num = 0;
-	Mat curr_frame;
 	VideoProcessor processor;
-	OF_Farneback of_fb;
+	PROCESS_FYGQ fygq_process;
+
 	//打开输入视频
 	//processor.setInput("F:\\video_dataset\\test1.avi");
 	processor.setInput("E:\\SIMIT\\2020_new_project\\zsxl\\dataset\\fgq.avi");
@@ -266,54 +328,9 @@ void process()
 	//设置每一帧的延时
 	processor.setDelay(1000. / processor.getFrameRate());
 	//设置帧处理函数，可以任意
-	processor.setFrameProcessor(&of_fb);
-
-	processor.readNextFrame(src,false);
-	src.copyTo(dst);
-	cout << src.size() << endl;
-	mask = Mat::zeros(src.size(), CV_8UC1);
-	track_line = Mat::zeros(src.size(), CV_8UC3);
-	track_priv_cur[0] = Point(-1, -1);
-	while (1)
-	{
-		int key = waitKey(10);
-		setMouseCallback("rlt", on_mouse, 0);
-		imshow("rlt", src);
-		if (key == 13 || key == 'q')
-		{
-			//if (cur_pt[0].x > cur_pt[1].x)
-			//	swap(cur_pt[0], cur_pt[1]);
-			break;
-		}
-			
-	}
-	cout <<"ROI:" <<cur_pt[3].x- cur_pt[0].x << endl;
-	quadrilateralVertexSort(cur_pt);
-	LC_POINT.x = min(cur_pt[0].x, cur_pt[1].x) + cvRound(abs(cur_pt[0].x - cur_pt[1].x) / 2.0);
-	LC_POINT.y = min(cur_pt[0].y, cur_pt[1].y) + cvRound(abs(cur_pt[0].y - cur_pt[1].y) / 2.0);
-	RC_POINT.x = min(cur_pt[2].x, cur_pt[3].x) + cvRound(abs(cur_pt[2].x - cur_pt[3].x) / 2.0);
-	RC_POINT.y = min(cur_pt[2].y, cur_pt[3].y) + cvRound(abs(cur_pt[2].y - cur_pt[3].y) / 2.0);
-	findExtendPointOfLine(LC_POINT, cur_pt[0],LU_POINT);
-	findExtendPointOfLine(RC_POINT, cur_pt[3], RU_POINT);
-	std::vector<cv::Point > contour;
-	contour.reserve(4);
-	contour.push_back(LU_POINT);
-	contour.push_back(LC_POINT);
-	contour.push_back(RC_POINT);
-	contour.push_back(RU_POINT);
-	std::vector<std::vector<cv::Point >> contours;
-	contours.push_back(contour);
-	cv::fillPoly(mask, contours, 255);
-
-	roi_area_size = countNonZero(mask);
-
-	cur_pt_lu_rd[0].x = min4(LU_POINT.x, cur_pt[0].x, cur_pt[3].x, RU_POINT.x); 
-	cur_pt_lu_rd[1].x = max4(LU_POINT.x, cur_pt[0].x, cur_pt[3].x, RU_POINT.x);
-	cur_pt_lu_rd[0].y = min4(LU_POINT.y, cur_pt[0].y, cur_pt[3].y, RU_POINT.y);
-	cur_pt_lu_rd[1].y = max4(LU_POINT.y, cur_pt[0].y, cur_pt[3].y, RU_POINT.y);
-
-	cur_pt_lu_rd[2].x = max4(cur_pt_lu_rd[1].x, cur_pt[1].x, cur_pt[2].x, cur_pt[3].x);
-	cur_pt_lu_rd[2].y = max4(cur_pt_lu_rd[1].y, cur_pt[1].y, cur_pt[2].y, cur_pt[3].y);
-	status = 1;
+	processor.setFrameProcessor(&fygq_process);
+	Mat frame;
+	processor.readNextFrame(frame, false);
+	fygq_process.setup(frame);
 	processor.run_syj();
 }

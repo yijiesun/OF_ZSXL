@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\include\functions.cpp" />
+    <ClCompile Include="..\include\PROCESS_MAIN.cpp" />
     <ClCompile Include="..\include\putText.cpp" />
-    <ClCompile Include="functions\optical_flow.cpp" />
+    <ClCompile Include="functions\PROCESS_FYGQ_TEST.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\functions.h" />
     <ClInclude Include="..\include\include.h" />
     <ClInclude Include="..\include\putText.h" />
   </ItemGroup>

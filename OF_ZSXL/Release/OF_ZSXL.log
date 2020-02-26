@@ -1,0 +1,18 @@
+﻿  functions.cpp
+..\include\functions.cpp(16): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+..\include\functions.cpp(18): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  putText.cpp
+..\include\putText.cpp(123): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  optical_flow.cpp
+functions\optical_flow.cpp(77): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+functions\optical_flow.cpp(78): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+functions\optical_flow.cpp(84): warning C4018: “<”: 有符号/无符号不匹配
+functions\optical_flow.cpp(85): warning C4018: “<”: 有符号/无符号不匹配
+functions\optical_flow.cpp(109): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+functions\optical_flow.cpp(160): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+  main.cpp
+  正在生成代码
+  All 456 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  OF_ZSXL.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Release\OF_ZSXL.exe
+  OF_ZSXL.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Release\OF_ZSXL.pdb (Full PDB)

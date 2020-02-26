@@ -16,13 +16,13 @@
     <Filter Include="源文件\functions">
       <UniqueIdentifier>{e30424b8-1f43-463b-81f0-5d72fae5a413}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\process">
+      <UniqueIdentifier>{6e5c8334-bd5f-43a6-b0fb-23909bc94dc2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="functions\optical_flow.cpp">
-      <Filter>源文件\functions</Filter>
     </ClCompile>
     <ClCompile Include="..\include\functions.cpp">
       <Filter>资源文件</Filter>
@@ -30,12 +30,21 @@
     <ClCompile Include="..\include\putText.cpp">
       <Filter>资源文件</Filter>
     </ClCompile>
+    <ClCompile Include="functions\process\PROCESS_FYGQ.cpp">
+      <Filter>源文件\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\PROCESS_MAIN.cpp">
+      <Filter>源文件\process</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\include.h">
       <Filter>资源文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\putText.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\functions.h">
       <Filter>资源文件</Filter>
     </ClInclude>
   </ItemGroup>
