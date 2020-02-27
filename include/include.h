@@ -18,6 +18,7 @@ public:
 
 class VideoProcessor {
 private:
+	float frame_downsampling_percent;
 	VideoCapture caputure;
 	VideoWriter writer;
 	
@@ -43,6 +44,7 @@ public:
 	vector<string>::const_iterator itImg;
 
 	VideoProcessor() : callIt(true), delay(0), fnumber(0), stop(false), digits(0), frameToStop(-1) {}
+	void setDownsamplingPercent(float per);
 	void setFrameProcessor(void(*process)(Mat &, Mat &));//设置图像处理函数
 	void  setFrameProcessor(FrameProcessor *frameprocessor);
 	void displayInput(string wn);//设置输入视频播放窗口
@@ -58,7 +60,7 @@ public:
 	void  dontCallProcess() { callIt = false; }
 	void stopAtFrameNo(long frame) { frameToStop = frame; }//设置停止帧
 	long getFrameNumber();// 获得当前帧的位置
-	Size getFrameSize();//获得帧大小
+	Size getFrameSize(bool isOrg=true);//获得帧大小
 	double getFrameRate() { return caputure.get(CV_CAP_PROP_FPS); }//获取帧率
 	int getCodec(char codec[4]);//获得编码类型
 

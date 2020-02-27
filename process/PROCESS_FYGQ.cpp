@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string>
 #include "putText.h"
+#include "config.h"
 
 using namespace std;
 using namespace cv;
@@ -19,11 +20,14 @@ using namespace cv;
 #define ARROW_LENGTH 50.0f
 #define MOTION_POINT_PER 1.0f //计算质心光流矢量时的最少光流数量  img size/MOTION_POINT_BIAS
 #define MAX_TRACK_DIS 5.0f  // 1/5 of img width
-#define CONTINUES_FRAME_GOAL 5//A窗口连续多少帧出现向下的矢量，则检测B窗口
+//#define CONTINUES_FRAME_GOAL 5//A窗口连续多少帧出现向下的矢量，则检测B窗口
 
 //视频opticalFlowFarnebackProcess类，继承自帧处理基类
 class PROCESS_FYGQ : public FrameProcessor {
 public:
+	Size orgFrameSize;
+	float frame_downsampling_percent;
+	int continues_frame_goal_cnt;
 	int status;//0-innit；1-检测A窗口；2-检测B窗口；3-成功；4-失败
 	int arrow_down_cnt;//矢量向下帧数计
 	Mat firstFrame;
@@ -42,7 +46,16 @@ public:
 	Mat gray, gray_roi, mask_roi;  //当前灰度图
 	Mat gray_prev, gray_prev_roi, output_roi;  //之前的灰度图
 
-	PROCESS_FYGQ() {}
+	PROCESS_FYGQ() {};
+	void init() {
+		Config cfg("..//config.txt");
+		continues_frame_goal_cnt = (int)cfg.get_param("continues_frame_goal_cnt");
+		frame_downsampling_percent = cfg.get_param("frame_downsampling_percent");
+		cout << "\n***********parameter***********\n" << endl;
+		cout << "frame_downsampling_percent:" << frame_downsampling_percent << endl;
+		cout << "continues_frame_goal_cnt:" << continues_frame_goal_cnt << endl;
+		
+	}
 	void process(Mat &frame, Mat &output) {
 		//得到灰度图
 		cvtColor(frame, gray, CV_BGR2GRAY);
@@ -159,7 +172,7 @@ public:
 				arrow_down_cnt++;
 			else
 				arrow_down_cnt = 0;
-			if (arrow_down_cnt > CONTINUES_FRAME_GOAL)
+			if (arrow_down_cnt > continues_frame_goal_cnt)
 			{
 				arrow_down_cnt = 0;
 				status = 2;
@@ -171,14 +184,14 @@ public:
 				arrow_down_cnt++;
 			else
 				arrow_down_cnt = 0;
-			if (arrow_down_cnt > CONTINUES_FRAME_GOAL)
+			if (arrow_down_cnt > continues_frame_goal_cnt)
 			{
 				arrow_down_cnt = 0;
 				status = 3;
 			}
 		}
-
-
+		if(frame_downsampling_percent!=1)
+			resize(output, output, orgFrameSize);
 		if (status == 1)
 		{
 			string txt2 = "检测红色A窗口...";
@@ -210,6 +223,7 @@ public:
 		}
 		else if (status == 3)
 		{
+			cout << "成绩合格！" << endl;
 			string txt2 = "红色A窗口检测成功";
 			string txt3 = "蓝色B窗口检测成功";
 			string txt4 = "成绩合格！";
@@ -322,12 +336,14 @@ void RUN_FYGQ()
 	cout << "\n\n\n************翻越高墙子系统启动成功！************\n"<<endl;
 	VideoProcessor processor;
 	PROCESS_FYGQ fygq_process;
-
+	fygq_process.init();
 	//打开输入视频
 	//processor.setInput("F:\\video_dataset\\test1.avi");
 	processor.setInput("E:\\SIMIT\\2020_new_project\\zsxl\\dataset\\fgq.avi");
-	processor.setOutput("E:\\SIMIT\\2020_new_project\\zsxl\\dataset\\result\\OF_ZSXL_FGQ.mp4.avi");
+	//processor.setOutput("E:\\SIMIT\\2020_new_project\\zsxl\\dataset\\result\\OF_ZSXL_FGQ.mp4.avi");
 	processor.displayOutput("rlt");
+	processor.setDownsamplingPercent(fygq_process.frame_downsampling_percent);
+	fygq_process.orgFrameSize = processor.getFrameSize();
 	//设置每一帧的延时
 	processor.setDelay(1000. / processor.getFrameRate());
 	//设置帧处理函数，可以任意
@@ -336,4 +352,5 @@ void RUN_FYGQ()
 	processor.readNextFrame(frame, false);
 	fygq_process.setup(frame);
 	processor.run_syj();
+	int aaa = 0;
 }

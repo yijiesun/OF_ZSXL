@@ -7,6 +7,7 @@
 
 void VideoProcessor::setFrameProcessor(void(*process)(Mat &, Mat &)) {
 	frameprocessor = 0;
+	frame_downsampling_percent = 1;
 	this->process = process;
 	CallProcess();
 }
@@ -71,6 +72,12 @@ bool VideoProcessor::setOutput(const string &filename,//路径
 	return true;
 
 }
+
+void VideoProcessor::setDownsamplingPercent(float per)
+{
+	frame_downsampling_percent = per;
+}
+
 void VideoProcessor::displayInput(string wn) {
 	WindowNameInput = wn;
 	namedWindow(WindowNameInput, WINDOW_AUTOSIZE);
@@ -94,11 +101,16 @@ long VideoProcessor::getFrameNumber() {
 	return fnumber;
 }
 
-Size VideoProcessor::getFrameSize() {
+Size VideoProcessor::getFrameSize(bool isOrg) {
 	if (images.size() == 0) {
 		// 从视频流获得帧大小
 		int w = static_cast<int>(caputure.get(CV_CAP_PROP_FRAME_WIDTH));
 		int h = static_cast<int>(caputure.get(CV_CAP_PROP_FRAME_HEIGHT));
+		if (!isOrg&&frame_downsampling_percent != 1)
+		{
+			w = static_cast<int>(w/ frame_downsampling_percent+0.5);
+			h = static_cast<int>(h / frame_downsampling_percent + 0.5);
+		}
 		return Size(w, h);
 	}
 	else {
@@ -110,10 +122,19 @@ Size VideoProcessor::getFrameSize() {
 
 bool VideoProcessor::readNextFrame(Mat &frame, bool isFrameNumAdd) {
 	if (images.size() == 0)
-		return caputure.read(frame);
+	{
+		bool ret = caputure.read(frame);
+		if(!ret)
+			return ret;
+		if (frame_downsampling_percent != 1)
+			resize(frame, frame, getFrameSize(false));
+		return ret;
+	}
 	else {
 		if (itImg != images.end()) {
 			frame = imread(*itImg);
+			if (frame_downsampling_percent != 1)
+				resize(frame, frame, Size());
 			if (isFrameNumAdd)
 				itImg++;
 			return frame.data ? 1 : 0;
@@ -164,8 +185,6 @@ void VideoProcessor::run_syj() {
 		//读取下一帧
 		if (!readNextFrame(frame))
 			break;
-		if (!readNextFrame(frame))
-			break;
 		if (WindowNameInput.length() != 0)
 			imshow(WindowNameInput, frame);
 		//处理该帧
@@ -174,6 +193,7 @@ void VideoProcessor::run_syj() {
 				process(frame, output);
 			else if (frameprocessor)
 			{
+				int mun= getFrameNumber();
 				cout << getFrameNumber();
 				frameprocessor->process(frame, output);
 			}

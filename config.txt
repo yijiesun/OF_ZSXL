@@ -1,0 +1,2 @@
+frame_downsampling_percent 1.0
+continues_frame_goal_cnt 5.0
