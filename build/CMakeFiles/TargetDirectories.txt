@@ -1,0 +1,3 @@
+/home/syj/zsxl/OF_ZSXL/build/CMakeFiles/rebuild_cache.dir
+/home/syj/zsxl/OF_ZSXL/build/CMakeFiles/ZSXL.dir
+/home/syj/zsxl/OF_ZSXL/build/CMakeFiles/edit_cache.dir
