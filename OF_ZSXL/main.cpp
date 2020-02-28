@@ -159,7 +159,7 @@ public:
 				break;  	//子系统界面
 			case 3:
 				title_str = TITLE_PARAM;
-				menu_size = 3;
+				menu_size = paramLength;
 				menu = paramList;
 				index = &paramIndex;
 				break;  	//参数配置界面
@@ -301,7 +301,7 @@ public:
 
 int main()
 {
-
+	getCurrentDate();
 	Menu menu;
 	menu.run();
 	return 0;

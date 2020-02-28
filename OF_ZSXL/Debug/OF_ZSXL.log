@@ -1,16 +1,21 @@
 ﻿  PROCESS_FYGQ.cpp
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(125): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(126): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(132): warning C4018: “<”: 有符号/无符号不匹配
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(133): warning C4018: “<”: 有符号/无符号不匹配
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(159): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(199): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(200): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(201): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(214): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(215): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(216): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(236): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(348): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(63): warning C4800: “float”: 将值强制为布尔值“true”或“false”(性能警告)
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(147): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(148): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(154): warning C4018: “<”: 有符号/无符号不匹配
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(155): warning C4018: “<”: 有符号/无符号不匹配
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(177): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(184): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(230): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(231): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(232): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(245): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(246): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(247): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(270): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(271): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(272): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(278): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+e:\simit\2020_new_project\zsxl\of_zsxl\process\process_fygq.cpp(385): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
   OF_ZSXL.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Debug\OF_ZSXL.exe
   OF_ZSXL.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Debug\OF_ZSXL.pdb (Partial PDB)

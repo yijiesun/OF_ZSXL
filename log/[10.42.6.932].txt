@@ -1,0 +1,544 @@
+[10.42.6.933]***********FYQG starting***********
+[10.42.6.933]***********parameter***********
+[10.42.6.933]frame_downsampling_percent: 1
+[10.42.6.933]continues_frame_goal_cnt: 5
+[10.42.9.112]set point: 393,177
+[10.42.10.312]set point: 386,482
+[10.42.11.687]set point: 746,483
+[10.42.12.967]set point: 747,174
+[10.42.13.831]ROI: 354
+[10.42.13.922]status:1
+[10.42.13.922]motion percent: 0
+[10.42.13.923]motion center: 393,20
+[10.42.13.923]motion direciton: -47.8637,-14.459
+[10.42.13.924]direction down cnt: 0
+[10.42.14.77]status:1
+[10.42.14.77]motion percent: 0
+[10.42.14.78]motion center: 393,20
+[10.42.14.78]motion direciton: -28.3758,-41.1681
+[10.42.14.79]direction down cnt: 0
+[10.42.14.232]status:1
+[10.42.14.232]motion percent: 0
+[10.42.14.233]motion center: 393,20
+[10.42.14.233]motion direciton: 36.6342,-34.0285
+[10.42.14.234]direction down cnt: 0
+[10.42.14.387]status:1
+[10.42.14.388]motion percent: 0
+[10.42.14.389]motion center: 393,20
+[10.42.14.389]motion direciton: -42.545,26.2664
+[10.42.14.390]direction down cnt: 1
+[10.42.14.546]status:1
+[10.42.14.546]motion percent: 0
+[10.42.14.547]motion center: 393,20
+[10.42.14.547]motion direciton: -49.7107,-5.37069
+[10.42.14.548]direction down cnt: 0
+[10.42.14.702]status:1
+[10.42.14.702]motion percent: 0
+[10.42.14.703]motion center: 393,20
+[10.42.14.704]motion direciton: 49.7938,-4.53652
+[10.42.14.704]direction down cnt: 0
+[10.42.14.859]status:1
+[10.42.14.859]motion percent: 0
+[10.42.14.860]motion center: 393,20
+[10.42.14.860]motion direciton: 49.9305,-2.63573
+[10.42.14.861]direction down cnt: 0
+[10.42.15.14]status:1
+[10.42.15.14]motion percent: 0.601066
+[10.42.15.15]motion center: 393,20
+[10.42.15.15]motion direciton: 49.7699,4.79102
+[10.42.15.16]direction down cnt: 1
+[10.42.15.172]status:1
+[10.42.15.172]motion percent: 1.67473
+[10.42.15.174]motion center: 649,160
+[10.42.15.174]motion direciton: -2.78005,-49.9227
+[10.42.15.174]direction down cnt: 0
+[10.42.15.328]status:1
+[10.42.15.328]motion percent: 2.07941
+[10.42.15.329]motion center: 630,160
+[10.42.15.331]motion direciton: -43.921,23.8945
+[10.42.15.331]direction down cnt: 1
+[10.42.15.482]status:1
+[10.42.15.483]motion percent: 2.4786
+[10.42.15.483]motion center: 631,158
+[10.42.15.484]motion direciton: 6.64756,-49.5561
+[10.42.15.484]direction down cnt: 0
+[10.42.15.639]status:1
+[10.42.15.639]motion percent: 3.67798
+[10.42.15.640]motion center: 649,153
+[10.42.15.640]motion direciton: 0.373269,-49.9986
+[10.42.15.641]direction down cnt: 0
+[10.42.15.796]status:1
+[10.42.15.796]motion percent: 3.4403
+[10.42.15.797]motion center: 647,145
+[10.42.15.797]motion direciton: -5.44252,-49.7029
+[10.42.15.798]direction down cnt: 0
+[10.42.15.952]status:1
+[10.42.15.952]motion percent: 4.44789
+[10.42.15.953]motion center: 655,143
+[10.42.15.953]motion direciton: 12.9752,-48.2871
+[10.42.15.954]direction down cnt: 0
+[10.42.16.107]status:1
+[10.42.16.108]motion percent: 5.15449
+[10.42.16.109]motion center: 650,135
+[10.42.16.110]motion direciton: 10.9467,-48.787
+[10.42.16.110]direction down cnt: 0
+[10.42.16.263]status:1
+[10.42.16.264]motion percent: 5.09576
+[10.42.16.266]motion center: 652,130
+[10.42.16.266]motion direciton: 18.9068,-46.2875
+[10.42.16.267]direction down cnt: 0
+[10.42.16.422]status:1
+[10.42.16.422]motion percent: 6.12629
+[10.42.16.423]motion center: 652,127
+[10.42.16.424]motion direciton: 27.9844,-41.4352
+[10.42.16.424]direction down cnt: 0
+[10.42.16.577]status:1
+[10.42.16.577]motion percent: 6.87234
+[10.42.16.578]motion center: 658,126
+[10.42.16.578]motion direciton: 41.6243,-27.7023
+[10.42.16.578]direction down cnt: 0
+[10.42.16.733]status:1
+[10.42.16.734]motion percent: 6.51813
+[10.42.16.735]motion center: 663,123
+[10.42.16.736]motion direciton: 45.0812,-21.6261
+[10.42.16.736]direction down cnt: 0
+[10.42.16.893]status:1
+[10.42.16.894]motion percent: 6.86592
+[10.42.16.894]motion center: 663,123
+[10.42.16.894]motion direciton: 44.539,-22.7216
+[10.42.16.895]direction down cnt: 0
+[10.42.17.47]status:1
+[10.42.17.47]motion percent: 5.2692
+[10.42.17.48]motion center: 672,125
+[10.42.17.48]motion direciton: 46.6937,-17.8802
+[10.42.17.49]direction down cnt: 0
+[10.42.17.203]status:1
+[10.42.17.204]motion percent: 6.30615
+[10.42.17.204]motion center: 680,132
+[10.42.17.205]motion direciton: 49.7712,-4.77813
+[10.42.17.205]direction down cnt: 0
+[10.42.17.359]status:1
+[10.42.17.359]motion percent: 6.90263
+[10.42.17.360]motion center: 673,131
+[10.42.17.360]motion direciton: 49.4924,-7.10665
+[10.42.17.361]direction down cnt: 0
+[10.42.17.515]status:1
+[10.42.17.516]motion percent: 9.03618
+[10.42.17.516]motion center: 666,128
+[10.42.17.516]motion direciton: 48.5131,12.1029
+[10.42.17.516]direction down cnt: 1
+[10.42.17.671]status:1
+[10.42.17.671]motion percent: 10.2787
+[10.42.17.672]motion center: 664,128
+[10.42.17.672]motion direciton: 47.7907,14.6986
+[10.42.17.673]direction down cnt: 2
+[10.42.17.826]status:1
+[10.42.17.826]motion percent: 7.47158
+[10.42.17.827]motion center: 671,130
+[10.42.17.828]motion direciton: 48.5453,11.9731
+[10.42.17.828]direction down cnt: 3
+[10.42.17.982]status:1
+[10.42.17.983]motion percent: 9.21788
+[10.42.17.983]motion center: 661,131
+[10.42.17.984]motion direciton: 49.9564,2.0867
+[10.42.17.984]direction down cnt: 4
+[10.42.18.141]status:1
+[10.42.18.141]motion percent: 9.17016
+[10.42.18.142]motion center: 661,132
+[10.42.18.142]motion direciton: 49.6315,-6.05934
+[10.42.18.143]direction down cnt: 0
+[10.42.18.295]status:1
+[10.42.18.295]motion percent: 9.67579
+[10.42.18.296]motion center: 656,132
+[10.42.18.298]motion direciton: 49.9921,0.888175
+[10.42.18.298]direction down cnt: 1
+[10.42.18.451]status:1
+[10.42.18.451]motion percent: 10.7238
+[10.42.18.452]motion center: 658,134
+[10.42.18.452]motion direciton: 49.355,8.00502
+[10.42.18.453]direction down cnt: 2
+[10.42.18.610]status:1
+[10.42.18.610]motion percent: 11.3276
+[10.42.18.611]motion center: 656,134
+[10.42.18.611]motion direciton: 43.3093,24.9861
+[10.42.18.611]direction down cnt: 3
+[10.42.18.766]status:1
+[10.42.18.766]motion percent: 11.9947
+[10.42.18.767]motion center: 652,136
+[10.42.18.767]motion direciton: 34.8365,35.8666
+[10.42.18.768]direction down cnt: 4
+[10.42.18.921]status:1
+[10.42.18.921]motion percent: 12.5104
+[10.42.18.922]motion center: 652,137
+[10.42.18.923]motion direciton: 30.7223,39.448
+[10.42.18.924]direction down cnt: 5
+[10.42.19.78]status:2
+[10.42.19.79]motion percent: 12.5536
+[10.42.19.79]motion center: 643,138
+[10.42.19.80]motion direciton: 19.2118,46.1617
+[10.42.19.81]direction down cnt: 0
+[10.42.19.397]status:2
+[10.42.19.397]motion percent: 15.0175
+[10.42.19.398]motion center: 640,149
+[10.42.19.398]motion direciton: 32.1582,38.2864
+[10.42.19.399]direction down cnt: 0
+[10.42.19.726]status:2
+[10.42.19.727]motion percent: 19.6214
+[10.42.19.727]motion center: 637,166
+[10.42.19.728]motion direciton: 28.1915,41.2946
+[10.42.19.728]direction down cnt: 0
+[10.42.20.50]status:2
+[10.42.20.50]motion percent: 19.0084
+[10.42.20.51]motion center: 638,169
+[10.42.20.51]motion direciton: 32.392,38.0888
+[10.42.20.52]direction down cnt: 0
+[10.42.20.365]status:2
+[10.42.20.366]motion percent: 15.4057
+[10.42.20.366]motion center: 652,172
+[10.42.20.367]motion direciton: 33.8215,36.8254
+[10.42.20.367]direction down cnt: 0
+[10.42.20.692]status:2
+[10.42.20.693]motion percent: 15.7745
+[10.42.20.694]motion center: 652,177
+[10.42.20.694]motion direciton: 40.705,29.0363
+[10.42.20.694]direction down cnt: 0
+[10.42.21.23]status:2
+[10.42.21.24]motion percent: 13.507
+[10.42.21.24]motion center: 654,177
+[10.42.21.25]motion direciton: 38.0438,32.4448
+[10.42.21.25]direction down cnt: 0
+[10.42.21.348]status:2
+[10.42.21.348]motion percent: 10.7605
+[10.42.21.349]motion center: 659,176
+[10.42.21.349]motion direciton: 44.3864,23.0183
+[10.42.21.350]direction down cnt: 0
+[10.42.21.665]status:2
+[10.42.21.665]motion percent: 9.44271
+[10.42.21.666]motion center: 663,166
+[10.42.21.666]motion direciton: 27.2414,41.9274
+[10.42.21.667]direction down cnt: 0
+[10.42.21.991]status:2
+[10.42.21.991]motion percent: 10.8275
+[10.42.21.991]motion center: 659,171
+[10.42.21.993]motion direciton: 41.5375,27.8324
+[10.42.21.993]direction down cnt: 0
+[10.42.22.316]status:2
+[10.42.22.317]motion percent: 8.4186
+[10.42.22.318]motion center: 648,161
+[10.42.22.318]motion direciton: 41.6276,27.6973
+[10.42.22.318]direction down cnt: 0
+[10.42.22.632]status:2
+[10.42.22.632]motion percent: 10.0089
+[10.42.22.633]motion center: 611,160
+[10.42.22.633]motion direciton: -8.38533,-49.2918
+[10.42.22.634]direction down cnt: 0
+[10.42.22.961]status:2
+[10.42.22.961]motion percent: 10.4173
+[10.42.22.962]motion center: 577,168
+[10.42.22.965]motion direciton: -34.8232,-35.8796
+[10.42.22.965]direction down cnt: 0
+[10.42.23.285]status:2
+[10.42.23.285]motion percent: 10.6705
+[10.42.23.286]motion center: 576,163
+[10.42.23.286]motion direciton: 49.6239,-6.1214
+[10.42.23.287]direction down cnt: 0
+[10.42.23.599]status:2
+[10.42.23.600]motion percent: 11.6111
+[10.42.23.600]motion center: 567,165
+[10.42.23.601]motion direciton: 44.578,-22.6451
+[10.42.23.601]direction down cnt: 0
+[10.42.23.926]status:2
+[10.42.23.926]motion percent: 9.92815
+[10.42.23.928]motion center: 556,166
+[10.42.23.929]motion direciton: 36.9592,-33.6752
+[10.42.23.929]direction down cnt: 0
+[10.42.24.256]status:2
+[10.42.24.257]motion percent: 9.7125
+[10.42.24.257]motion center: 556,172
+[10.42.24.259]motion direciton: 45.2499,-21.2709
+[10.42.24.260]direction down cnt: 0
+[10.42.24.585]status:2
+[10.42.24.586]motion percent: 8.84531
+[10.42.24.587]motion center: 569,182
+[10.42.24.587]motion direciton: 47.7442,14.849
+[10.42.24.587]direction down cnt: 0
+[10.42.24.910]status:2
+[10.42.24.911]motion percent: 12.2113
+[10.42.24.912]motion center: 561,165
+[10.42.24.912]motion direciton: 34.0108,36.6506
+[10.42.24.912]direction down cnt: 0
+[10.42.25.238]status:2
+[10.42.25.238]motion percent: 13.3721
+[10.42.25.239]motion center: 565,162
+[10.42.25.239]motion direciton: 28.1928,41.2937
+[10.42.25.240]direction down cnt: 0
+[10.42.25.568]status:2
+[10.42.25.568]motion percent: 14.1631
+[10.42.25.569]motion center: 566,167
+[10.42.25.569]motion direciton: 32.2852,38.1794
+[10.42.25.570]direction down cnt: 0
+[10.42.25.896]status:2
+[10.42.25.897]motion percent: 14.8541
+[10.42.25.898]motion center: 565,171
+[10.42.25.898]motion direciton: 23.106,44.3409
+[10.42.25.898]direction down cnt: 0
+[10.42.26.223]status:2
+[10.42.26.223]motion percent: 15.068
+[10.42.26.225]motion center: 567,178
+[10.42.26.226]motion direciton: 26.9514,42.1144
+[10.42.26.226]direction down cnt: 0
+[10.42.26.552]status:2
+[10.42.26.552]motion percent: 16.4509
+[10.42.26.553]motion center: 572,185
+[10.42.26.554]motion direciton: 27.1966,41.9565
+[10.42.26.554]direction down cnt: 0
+[10.42.26.879]status:2
+[10.42.26.880]motion percent: 19.9719
+[10.42.26.881]motion center: 595,190
+[10.42.26.881]motion direciton: 26.2338,42.5651
+[10.42.26.882]direction down cnt: 0
+[10.42.27.209]status:2
+[10.42.27.209]motion percent: 20.3702
+[10.42.27.209]motion center: 602,190
+[10.42.27.210]motion direciton: 27.2986,41.8902
+[10.42.27.210]direction down cnt: 0
+[10.42.27.537]status:2
+[10.42.27.537]motion percent: 19.5727
+[10.42.27.537]motion center: 610,196
+[10.42.27.539]motion direciton: 21.6353,45.0768
+[10.42.27.539]direction down cnt: 0
+[10.42.27.865]status:2
+[10.42.27.866]motion percent: 19.4571
+[10.42.27.866]motion center: 623,200
+[10.42.27.867]motion direciton: 16.949,47.0397
+[10.42.27.867]direction down cnt: 1
+[10.42.28.193]status:2
+[10.42.28.194]motion percent: 19.9114
+[10.42.28.195]motion center: 629,204
+[10.42.28.195]motion direciton: 12.2064,48.4871
+[10.42.28.196]direction down cnt: 2
+[10.42.28.519]status:2
+[10.42.28.519]motion percent: 20.2032
+[10.42.28.520]motion center: 637,210
+[10.42.28.521]motion direciton: 11.2431,48.7195
+[10.42.28.523]direction down cnt: 3
+[10.42.28.849]status:2
+[10.42.28.849]motion percent: 18.6239
+[10.42.28.850]motion center: 637,217
+[10.42.28.850]motion direciton: 7.42068,49.4463
+[10.42.28.851]direction down cnt: 4
+[10.42.29.179]status:2
+[10.42.29.179]motion percent: 18.1862
+[10.42.29.180]motion center: 636,217
+[10.42.29.180]motion direciton: 2.31078,49.9466
+[10.42.29.181]direction down cnt: 5
+[10.42.29.504]status:3
+[10.42.29.505]motion percent: 15.8911
+[10.42.29.506]motion center: 645,224
+[10.42.29.507]motion direciton: 2.87257,49.9174
+[10.42.29.507]direction down cnt: 0
+[10.42.29.835]status:3
+[10.42.29.835]motion percent: 14.4127
+[10.42.29.836]motion center: 657,225
+[10.42.29.836]motion direciton: -1.93754,-49.9624
+[10.42.29.837]direction down cnt: 0
+[10.42.30.161]status:3
+[10.42.30.162]motion percent: 16.7344
+[10.42.30.163]motion center: 660,234
+[10.42.30.165]motion direciton: 11.3394,48.6972
+[10.42.30.165]direction down cnt: 0
+[10.42.30.489]status:3
+[10.42.30.490]motion percent: 12.8647
+[10.42.30.490]motion center: 663,236
+[10.42.30.491]motion direciton: -10.0003,-48.9897
+[10.42.30.491]direction down cnt: 0
+[10.42.30.819]status:3
+[10.42.30.819]motion percent: 14.1833
+[10.42.30.819]motion center: 669,239
+[10.42.30.820]motion direciton: -1.58067,49.975
+[10.42.30.820]direction down cnt: 0
+[10.42.31.146]status:3
+[10.42.31.146]motion percent: 11.0202
+[10.42.31.147]motion center: 675,249
+[10.42.31.148]motion direciton: 23.0185,-44.3864
+[10.42.31.148]direction down cnt: 0
+[10.42.31.473]status:3
+[10.42.31.473]motion percent: 10.8541
+[10.42.31.474]motion center: 676,247
+[10.42.31.474]motion direciton: -14.6615,47.8021
+[10.42.31.475]direction down cnt: 0
+[10.42.31.801]status:3
+[10.42.31.801]motion percent: 12.1782
+[10.42.31.804]motion center: 672,254
+[10.42.31.804]motion direciton: 31.0846,-39.1631
+[10.42.31.805]direction down cnt: 0
+[10.42.32.130]status:3
+[10.42.32.130]motion percent: 12.7509
+[10.42.32.131]motion center: 678,250
+[10.42.32.131]motion direciton: -13.0336,48.2714
+[10.42.32.132]direction down cnt: 0
+[10.42.32.457]status:3
+[10.42.32.458]motion percent: 12.9115
+[10.42.32.459]motion center: 677,275
+[10.42.32.459]motion direciton: -12.6516,-48.3729
+[10.42.32.459]direction down cnt: 0
+[10.42.32.785]status:3
+[10.42.32.785]motion percent: 11.512
+[10.42.32.786]motion center: 677,279
+[10.42.32.787]motion direciton: 6.03122,49.6349
+[10.42.32.787]direction down cnt: 0
+[10.42.33.115]status:3
+[10.42.33.115]motion percent: 8.88202
+[10.42.33.116]motion center: 673,295
+[10.42.33.117]motion direciton: -0.0737904,-49.9999
+[10.42.33.117]direction down cnt: 0
+[10.42.33.441]status:3
+[10.42.33.441]motion percent: 9.15456
+[10.42.33.442]motion center: 663,297
+[10.42.33.442]motion direciton: 34.1529,36.5182
+[10.42.33.443]direction down cnt: 0
+[10.42.33.773]status:3
+[10.42.33.774]motion percent: 3.4871
+[10.42.33.774]motion center: 701,308
+[10.42.33.775]motion direciton: 22.7136,-44.5432
+[10.42.33.775]direction down cnt: 0
+[10.42.34.102]status:3
+[10.42.34.102]motion percent: 2.74655
+[10.42.34.103]motion center: 713,303
+[10.42.34.103]motion direciton: -19.1708,46.1788
+[10.42.34.104]direction down cnt: 0
+[10.42.34.426]status:3
+[10.42.34.426]motion percent: 1.92708
+[10.42.34.427]motion center: 709,305
+[10.42.34.428]motion direciton: 33.0623,-37.5085
+[10.42.34.428]direction down cnt: 0
+[10.42.34.755]status:3
+[10.42.34.755]motion percent: 2.55843
+[10.42.34.756]motion center: 707,312
+[10.42.34.757]motion direciton: -43.0592,25.4147
+[10.42.34.757]direction down cnt: 0
+[10.42.35.82]status:3
+[10.42.35.83]motion percent: 2.58871
+[10.42.35.83]motion center: 700,317
+[10.42.35.84]motion direciton: 49.4674,-7.27851
+[10.42.35.84]direction down cnt: 0
+[10.42.35.409]status:3
+[10.42.35.409]motion percent: 2.77316
+[10.42.35.410]motion center: 692,318
+[10.42.35.410]motion direciton: -49.5153,-6.94539
+[10.42.35.412]direction down cnt: 0
+[10.42.35.736]status:3
+[10.42.35.737]motion percent: 3.56052
+[10.42.35.737]motion center: 688,313
+[10.42.35.738]motion direciton: 47.6978,14.9975
+[10.42.35.738]direction down cnt: 0
+[10.42.36.51]status:3
+[10.42.36.51]motion percent: 4.39375
+[10.42.36.52]motion center: 683,307
+[10.42.36.52]motion direciton: -46.8995,-17.3332
+[10.42.36.53]direction down cnt: 0
+[10.42.36.365]status:3
+[10.42.36.366]motion percent: 4.85074
+[10.42.36.366]motion center: 667,302
+[10.42.36.367]motion direciton: 46.0032,19.5883
+[10.42.36.367]direction down cnt: 0
+[10.42.36.694]status:3
+[10.42.36.694]motion percent: 4.67455
+[10.42.36.694]motion center: 671,305
+[10.42.36.695]motion direciton: -44.9297,-21.939
+[10.42.36.695]direction down cnt: 0
+[10.42.37.25]status:3
+[10.42.37.25]motion percent: 5.10769
+[10.42.37.26]motion center: 658,308
+[10.42.37.27]motion direciton: 47.1009,16.7781
+[10.42.37.27]direction down cnt: 0
+[10.42.37.347]status:3
+[10.42.37.348]motion percent: 6.17768
+[10.42.37.348]motion center: 658,307
+[10.42.37.349]motion direciton: -49.9853,1.21313
+[10.42.37.349]direction down cnt: 0
+[10.42.37.678]status:3
+[10.42.37.679]motion percent: 5.7785
+[10.42.37.680]motion center: 649,307
+[10.42.37.680]motion direciton: 49.2071,-8.86886
+[10.42.37.681]direction down cnt: 0
+[10.42.38.5]status:3
+[10.42.38.5]motion percent: 6.12812
+[10.42.38.6]motion center: 649,306
+[10.42.38.6]motion direciton: -49.9417,2.41448
+[10.42.38.7]direction down cnt: 0
+[10.42.38.332]status:3
+[10.42.38.332]motion percent: 5.94367
+[10.42.38.333]motion center: 635,304
+[10.42.38.333]motion direciton: 49.9998,-0.152573
+[10.42.38.334]direction down cnt: 0
+[10.42.38.663]status:3
+[10.42.38.663]motion percent: 5.86292
+[10.42.38.664]motion center: 634,302
+[10.42.38.664]motion direciton: -49.9882,1.08492
+[10.42.38.665]direction down cnt: 0
+[10.42.38.990]status:3
+[10.42.38.991]motion percent: 6.709
+[10.42.38.991]motion center: 609,304
+[10.42.38.992]motion direciton: 49.9549,2.12288
+[10.42.38.992]direction down cnt: 0
+[10.42.39.317]status:3
+[10.42.39.317]motion percent: 7.10176
+[10.42.39.319]motion center: 612,303
+[10.42.39.319]motion direciton: -49.4652,-7.29328
+[10.42.39.320]direction down cnt: 0
+[10.42.39.643]status:3
+[10.42.39.644]motion percent: 9.06738
+[10.42.39.645]motion center: 584,298
+[10.42.39.645]motion direciton: 49.4523,7.38013
+[10.42.39.645]direction down cnt: 0
+[10.42.39.959]status:3
+[10.42.39.959]motion percent: 8.57001
+[10.42.39.960]motion center: 584,302
+[10.42.39.960]motion direciton: -49.9071,-3.0468
+[10.42.39.961]direction down cnt: 0
+[10.42.40.285]status:3
+[10.42.40.285]motion percent: 8.46632
+[10.42.40.286]motion center: 561,299
+[10.42.40.287]motion direciton: 50,0.0561482
+[10.42.40.287]direction down cnt: 0
+[10.42.40.613]status:3
+[10.42.40.613]motion percent: 7.76706
+[10.42.40.615]motion center: 561,301
+[10.42.40.616]motion direciton: -49.9602,-1.99436
+[10.42.40.616]direction down cnt: 0
+[10.42.40.939]status:3
+[10.42.40.940]motion percent: 7.946
+[10.42.40.941]motion center: 544,301
+[10.42.40.941]motion direciton: 49.1684,9.08126
+[10.42.40.941]direction down cnt: 0
+[10.42.41.255]status:3
+[10.42.41.255]motion percent: 6.74112
+[10.42.41.256]motion center: 541,301
+[10.42.41.256]motion direciton: -38.7138,-31.6424
+[10.42.41.256]direction down cnt: 0
+[10.42.41.583]status:3
+[10.42.41.583]motion percent: 9.65927
+[10.42.41.584]motion center: 531,294
+[10.42.41.585]motion direciton: 24.4953,43.5888
+[10.42.41.585]direction down cnt: 0
+[10.42.41.912]status:3
+[10.42.41.912]motion percent: 9.72076
+[10.42.41.913]motion center: 528,296
+[10.42.41.913]motion direciton: -28.0509,-41.3902
+[10.42.41.914]direction down cnt: 0
+[10.42.42.237]status:3
+[10.42.42.238]motion percent: 11.8837
+[10.42.42.239]motion center: 517,295
+[10.42.42.239]motion direciton: 47.1018,16.7755
+[10.42.42.239]direction down cnt: 0
+[10.42.42.550]status:3
+[10.42.42.550]motion percent: 12.2957
+[10.42.42.551]motion center: 518,294
+[10.42.42.553]motion direciton: -49.9952,-0.695312
+[10.42.42.553]direction down cnt: 0
+[10.42.42.882]status:3
+[10.42.42.882]motion percent: 12.9583
+[10.42.42.883]motion center: 504,293
+[10.42.42.884]motion direciton: 49.9798,-1.42064
+[10.42.42.884]direction down cnt: 0

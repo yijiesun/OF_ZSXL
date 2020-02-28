@@ -43,9 +43,9 @@ bool VideoProcessor::setOutput(const string &filename, int codec, double framera
 		framerate = getFrameRate();
 	}
 	//获取输入原视频的编码方式
-	char c[4];
+
 	if (codec == 0) {
-		codec = getCodec(c);
+		codec = getCodec();
 	}
 	return writer.open(Outputfile,
 		codec,
@@ -102,49 +102,32 @@ long VideoProcessor::getFrameNumber() {
 }
 
 Size VideoProcessor::getFrameSize(bool isOrg) {
-	if (images.size() == 0) {
-		// 从视频流获得帧大小
-		int w = static_cast<int>(caputure.get(CV_CAP_PROP_FRAME_WIDTH));
-		int h = static_cast<int>(caputure.get(CV_CAP_PROP_FRAME_HEIGHT));
-		if (!isOrg&&frame_downsampling_percent != 1)
-		{
-			w = static_cast<int>(w/ frame_downsampling_percent+0.5);
-			h = static_cast<int>(h / frame_downsampling_percent + 0.5);
-		}
-		return Size(w, h);
+
+	// 从视频流获得帧大小
+	int w = static_cast<int>(caputure.get(CV_CAP_PROP_FRAME_WIDTH));
+	int h = static_cast<int>(caputure.get(CV_CAP_PROP_FRAME_HEIGHT));
+	if (!isOrg&&frame_downsampling_percent != 1)
+	{
+		w = static_cast<int>(w/ frame_downsampling_percent+0.5);
+		h = static_cast<int>(h / frame_downsampling_percent + 0.5);
 	}
-	else {
-		//从图像获得帧大小
-		cv::Mat tmp = cv::imread(images[0]);
-		return (tmp.data) ? (tmp.size()) : (Size(0, 0));
-	}
+	return Size(w, h);
+
 }
 
 bool VideoProcessor::readNextFrame(Mat &frame, bool isFrameNumAdd) {
-	if (images.size() == 0)
-	{
-		bool ret = caputure.read(frame);
-		if(!ret)
-			return ret;
-		if (frame_downsampling_percent != 1)
-			resize(frame, frame, getFrameSize(false));
+
+	bool ret = caputure.read(frame);
+	if(!ret)
 		return ret;
-	}
-	else {
-		if (itImg != images.end()) {
-			frame = imread(*itImg);
-			if (frame_downsampling_percent != 1)
-				resize(frame, frame, Size());
-			if (isFrameNumAdd)
-				itImg++;
-			return frame.data ? 1 : 0;
-		}
-		else
-			return false;
-	}
+	if (frame_downsampling_percent != 1)
+		resize(frame, frame, getFrameSize(false));
+	return ret;
+
 }
 
-int VideoProcessor::getCodec(char codec[4]) {
+int VideoProcessor::getCodec() {
+	char codec[4];
 	if (images.size() != 0)
 		return -1;
 	union { // 数据结构4-char
@@ -163,16 +146,9 @@ int VideoProcessor::getCodec(char codec[4]) {
 }
 
 void VideoProcessor::writeNextFrame(Mat &frame) {
-	//如果扩展名不为空，写到图片文件中
-	if (extension.length()) {
-		stringstream ss;
-		ss << Outputfile << setfill('0') << setw(digits) << currentIndex++ << extension;
-		imwrite(ss.str(), frame);
-	}
-	//反之，写到视频文件中
-	else {
+	if(!Outputfile.empty())
 		writer.write(frame);
-	}
+	
 }
 
 void VideoProcessor::run_syj() {
@@ -193,8 +169,6 @@ void VideoProcessor::run_syj() {
 				process(frame, output);
 			else if (frameprocessor)
 			{
-				int mun= getFrameNumber();
-				cout << getFrameNumber();
 				frameprocessor->process(frame, output);
 			}
 
@@ -215,5 +189,6 @@ void VideoProcessor::run_syj() {
 		if (frameToStop >= 0 && getFrameNumber() == frameToStop)
 			stopIt();
 	}
-
+	if (!Outputfile.empty()) writer.release();
+	caputure.release();
 }

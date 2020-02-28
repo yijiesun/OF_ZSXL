@@ -62,7 +62,7 @@ public:
 	long getFrameNumber();// 获得当前帧的位置
 	Size getFrameSize(bool isOrg=true);//获得帧大小
 	double getFrameRate() { return caputure.get(CV_CAP_PROP_FPS); }//获取帧率
-	int getCodec(char codec[4]);//获得编码类型
+	int getCodec();//获得编码类型
 
 	//打开视频
 	bool setInput(string filename);

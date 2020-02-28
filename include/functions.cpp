@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 #include<sstream>
+#include <windows.h>
+#include<time.h>
 #include "functions.h"
 
 using namespace cv;
@@ -67,6 +69,14 @@ string fp2string(float Num)
 	return str;
 }
 
+string int2string(int Num)
+{
+	ostringstream oss;
+	oss << Num;
+	string str(oss.str());
+	return str;
+}
+
 int max4(int a,int b,int c,int d)
 {
 	int tmp = max(a, b);
@@ -79,4 +89,35 @@ int min4(int a, int b, int c, int d)
 	int tmp = min(a, b);
 	int tmp1 = min(c, d);
 	return min(tmp, tmp1);
+}
+
+//h.m.s.ms
+string getCurrentDate()
+{
+	string date;
+	char date_char[4][100];
+	SYSTEMTIME tm;
+	GetLocalTime(&tm);
+
+	sprintf(date_char[0],"%d", tm.wHour);
+	sprintf(date_char[1], "%d", tm.wMinute);
+	sprintf(date_char[2], "%d", tm.wSecond);
+	sprintf(date_char[3], "%d", tm.wMilliseconds);
+	date = "[";
+	date += date_char[0];
+	date += ".";
+	date += date_char[1];
+	date += ".";
+	date += date_char[2];
+	date += ".";
+	date += date_char[3];
+	date += "]";
+	return date;
+}
+
+double what_time_is_it_now_s()
+{
+	SYSTEMTIME tm;
+	GetLocalTime(&tm);
+	return (double)tm.wSecond + (double)tm.wMilliseconds * 0.001;
 }

@@ -1,0 +1,367 @@
+[13.33.24.26]***********FYQG starting***********
+[13.33.24.26]***********parameter***********
+[13.33.24.27]frame_downsampling_percent: 2
+[13.33.24.27]continues_frame_goal_cnt: 5
+[13.33.25.396]set point: 196,90
+[13.33.26.379]set point: 193,241
+[13.33.27.395]set point: 372,238
+[13.33.28.595]set point: 375,87
+[13.33.29.380]flow ROI size: 179X151
+[13.33.29.417]status:1
+[13.33.29.418]fps:53
+[13.33.29.419]motion percent: 0
+[13.33.29.419]motion center: 196,11
+[13.33.29.420]motion direciton: 49.9595,-2.01151
+[13.33.29.420]direction down cnt: 0
+[13.33.29.559]status:1
+[13.33.29.559]fps:53
+[13.33.29.559]motion percent: 0
+[13.33.29.561]motion center: 196,11
+[13.33.29.561]motion direciton: 34.2573,36.4203
+[13.33.29.561]direction down cnt: 1
+[13.33.29.668]status:1
+[13.33.29.668]fps:53
+[13.33.29.669]motion percent: 0
+[13.33.29.669]motion center: 196,11
+[13.33.29.670]motion direciton: 32.5061,-37.9915
+[13.33.29.670]direction down cnt: 0
+[13.33.29.776]status:1
+[13.33.29.776]fps:56
+[13.33.29.778]motion percent: 0
+[13.33.29.778]motion center: 196,11
+[13.33.29.778]motion direciton: -6.1758,49.6171
+[13.33.29.779]direction down cnt: 1
+[13.33.29.886]status:1
+[13.33.29.886]fps:53
+[13.33.29.887]motion percent: 0
+[13.33.29.887]motion center: 196,11
+[13.33.29.888]motion direciton: -41.1894,28.3449
+[13.33.29.888]direction down cnt: 2
+[13.33.29.995]status:1
+[13.33.29.995]fps:53
+[13.33.29.996]motion percent: 0
+[13.33.29.996]motion center: 196,11
+[13.33.29.997]motion direciton: 45.5571,20.6047
+[13.33.29.997]direction down cnt: 3
+[13.33.30.105]status:1
+[13.33.30.105]fps:56
+[13.33.30.106]motion percent: 0
+[13.33.30.107]motion center: 196,11
+[13.33.30.107]motion direciton: 49.771,-4.77986
+[13.33.30.107]direction down cnt: 0
+[13.33.30.214]status:1
+[13.33.30.214]fps:53
+[13.33.30.215]motion percent: 1.04598
+[13.33.30.216]motion center: 335,82
+[13.33.30.216]motion direciton: 48.246,13.127
+[13.33.30.216]direction down cnt: 1
+[13.33.30.323]status:1
+[13.33.30.323]fps:56
+[13.33.30.325]motion percent: 1.26026
+[13.33.30.325]motion center: 332,82
+[13.33.30.325]motion direciton: -4.91484,-49.7579
+[13.33.30.325]direction down cnt: 0
+[13.33.30.433]status:1
+[13.33.30.434]fps:56
+[13.33.30.434]motion percent: 1.47091
+[13.33.30.435]motion center: 320,81
+[13.33.30.435]motion direciton: -42.2319,-26.7669
+[13.33.30.436]direction down cnt: 0
+[13.33.30.542]status:1
+[13.33.30.543]fps:56
+[13.33.30.545]motion percent: 2.1537
+[13.33.30.545]motion center: 319,80
+[13.33.30.545]motion direciton: 5.88342,-49.6526
+[13.33.30.546]direction down cnt: 0
+[13.33.30.652]status:1
+[13.33.30.652]fps:53
+[13.33.30.653]motion percent: 3.46844
+[13.33.30.654]motion center: 327,77
+[13.33.30.654]motion direciton: -4.98787,-49.7506
+[13.33.30.654]direction down cnt: 0
+[13.33.30.761]status:1
+[13.33.30.762]fps:59
+[13.33.30.763]motion percent: 1.46001
+[13.33.30.763]motion center: 322,70
+[13.33.30.764]motion direciton: -1.4895,-49.9778
+[13.33.30.764]direction down cnt: 0
+[13.33.30.871]status:1
+[13.33.30.871]fps:53
+[13.33.30.872]motion percent: 0.733638
+[13.33.30.872]motion center: 196,11
+[13.33.30.872]motion direciton: 15.7404,-47.4578
+[13.33.30.873]direction down cnt: 0
+[13.33.30.980]status:1
+[13.33.30.981]fps:53
+[13.33.30.981]motion percent: 2.34982
+[13.33.30.982]motion center: 332,59
+[13.33.30.982]motion direciton: 11.1997,-48.7295
+[13.33.30.982]direction down cnt: 0
+[13.33.31.89]status:1
+[13.33.31.89]fps:53
+[13.33.31.90]motion percent: 1.6634
+[13.33.31.90]motion center: 327,63
+[13.33.31.91]motion direciton: 19.789,-45.9173
+[13.33.31.91]direction down cnt: 0
+[13.33.31.200]status:1
+[13.33.31.200]fps:56
+[13.33.31.201]motion percent: 3.70814
+[13.33.31.201]motion center: 325,56
+[13.33.31.201]motion direciton: 26.0352,-42.6869
+[13.33.31.201]direction down cnt: 0
+[13.33.31.308]status:1
+[13.33.31.308]fps:53
+[13.33.31.309]motion percent: 4.33646
+[13.33.31.311]motion center: 329,57
+[13.33.31.311]motion direciton: 41.6602,-27.6483
+[13.33.31.313]direction down cnt: 0
+[13.33.31.418]status:1
+[13.33.31.418]fps:53
+[13.33.31.419]motion percent: 3.01809
+[13.33.31.419]motion center: 329,54
+[13.33.31.419]motion direciton: 44.4463,-22.9025
+[13.33.31.420]direction down cnt: 0
+[13.33.31.527]status:1
+[13.33.31.527]fps:56
+[13.33.31.528]motion percent: 1.41643
+[13.33.31.528]motion center: 335,60
+[13.33.31.529]motion direciton: 44.3044,-23.1758
+[13.33.31.529]direction down cnt: 0
+[13.33.31.636]status:1
+[13.33.31.637]fps:53
+[13.33.31.637]motion percent: 0.984238
+[13.33.31.637]motion center: 196,11
+[13.33.31.638]motion direciton: 46.5638,-18.2157
+[13.33.31.638]direction down cnt: 0
+[13.33.31.746]status:1
+[13.33.31.746]fps:56
+[13.33.31.747]motion percent: 0.272391
+[13.33.31.748]motion center: 196,11
+[13.33.31.748]motion direciton: 49.6515,-5.89281
+[13.33.31.748]direction down cnt: 0
+[13.33.31.855]status:1
+[13.33.31.855]fps:53
+[13.33.31.857]motion percent: 1.322
+[13.33.31.857]motion center: 324,83
+[13.33.31.857]motion direciton: 49.6047,-6.27464
+[13.33.31.858]direction down cnt: 0
+[13.33.31.965]status:1
+[13.33.31.965]fps:53
+[13.33.31.966]motion percent: 5.01562
+[13.33.31.966]motion center: 339,66
+[13.33.31.966]motion direciton: 49.4952,7.0869
+[13.33.31.967]direction down cnt: 1
+[13.33.32.74]status:1
+[13.33.32.75]fps:53
+[13.33.32.75]motion percent: 7.50708
+[13.33.32.76]motion center: 340,62
+[13.33.32.76]motion direciton: 48.7744,11.0025
+[13.33.32.76]direction down cnt: 2
+[13.33.32.183]status:1
+[13.33.32.184]fps:56
+[13.33.32.184]motion percent: 0.937023
+[13.33.32.185]motion center: 196,11
+[13.33.32.185]motion direciton: 49.4142,7.63112
+[13.33.32.185]direction down cnt: 3
+[13.33.32.292]status:1
+[13.33.32.293]fps:53
+[13.33.32.294]motion percent: 2.47331
+[13.33.32.295]motion center: 330,70
+[13.33.32.295]motion direciton: 49.9892,-1.03702
+[13.33.32.295]direction down cnt: 0
+[13.33.32.401]status:1
+[13.33.32.401]fps:53
+[13.33.32.402]motion percent: 4.36188
+[13.33.32.404]motion center: 326,68
+[13.33.32.404]motion direciton: 49.5559,-6.64917
+[13.33.32.404]direction down cnt: 0
+[13.33.32.512]status:1
+[13.33.32.513]fps:53
+[13.33.32.514]motion percent: 6.32309
+[13.33.32.514]motion center: 327,68
+[13.33.32.514]motion direciton: 49.5511,-6.6849
+[13.33.32.515]direction down cnt: 0
+[13.33.32.621]status:1
+[13.33.32.621]fps:53
+[13.33.32.622]motion percent: 7.3836
+[13.33.32.622]motion center: 326,67
+[13.33.32.623]motion direciton: 49.9798,1.42117
+[13.33.32.623]direction down cnt: 1
+[13.33.32.731]status:1
+[13.33.32.731]fps:56
+[13.33.32.732]motion percent: 6.82429
+[13.33.32.732]motion center: 333,67
+[13.33.32.732]motion direciton: 43.2491,25.0901
+[13.33.32.733]direction down cnt: 2
+[13.33.32.839]status:1
+[13.33.32.839]fps:53
+[13.33.32.840]motion percent: 7.6233
+[13.33.32.841]motion center: 334,67
+[13.33.32.841]motion direciton: 34.1374,36.5327
+[13.33.32.841]direction down cnt: 3
+[13.33.32.950]status:1
+[13.33.32.950]fps:53
+[13.33.32.950]motion percent: 9.21406
+[13.33.32.950]motion center: 328,69
+[13.33.32.950]motion direciton: 28.19,41.2956
+[13.33.32.951]direction down cnt: 4
+[13.33.33.59]status:1
+[13.33.33.59]fps:53
+[13.33.33.59]motion percent: 11.2189
+[13.33.33.61]motion center: 319,69
+[13.33.33.62]motion direciton: 18.6125,46.4066
+[13.33.33.62]direction down cnt: 5
+[13.33.33.168]status:2
+[13.33.33.168]fps:53
+[13.33.33.169]motion percent: 11.7673
+[13.33.33.170]motion center: 318,69
+[13.33.33.170]motion direciton: 11.8816,48.5678
+[13.33.33.170]direction down cnt: 0
+[13.33.33.317]status:2
+[13.33.33.317]fps:18
+[13.33.33.318]motion percent: 17.2332
+[13.33.33.319]motion center: 319,80
+[13.33.33.319]motion direciton: 28.1876,41.2972
+[13.33.33.319]direction down cnt: 0
+[13.33.33.457]status:2
+[13.33.33.458]fps:17
+[13.33.33.458]motion percent: 17.3967
+[13.33.33.458]motion center: 323,85
+[13.33.33.459]motion direciton: 37.0653,33.5584
+[13.33.33.459]direction down cnt: 0
+[13.33.33.598]status:2
+[13.33.33.598]fps:17
+[13.33.33.599]motion percent: 16.2635
+[13.33.33.599]motion center: 326,89
+[13.33.33.600]motion direciton: 36.0688,34.6272
+[13.33.33.600]direction down cnt: 0
+[13.33.33.739]status:2
+[13.33.33.739]fps:17
+[13.33.33.739]motion percent: 13.6159
+[13.33.33.739]motion center: 331,92
+[13.33.33.740]motion direciton: 42.575,26.2177
+[13.33.33.740]direction down cnt: 0
+[13.33.33.879]status:2
+[13.33.33.879]fps:18
+[13.33.33.880]motion percent: 11.4368
+[13.33.33.880]motion center: 335,91
+[13.33.33.880]motion direciton: 41.5249,27.8511
+[13.33.33.880]direction down cnt: 0
+[13.33.34.20]status:2
+[13.33.34.20]fps:18
+[13.33.34.21]motion percent: 8.55306
+[13.33.34.21]motion center: 339,89
+[13.33.34.22]motion direciton: 46.6966,17.8725
+[13.33.34.22]direction down cnt: 0
+[13.33.34.161]status:2
+[13.33.34.162]fps:18
+[13.33.34.162]motion percent: 5.52771
+[13.33.34.163]motion center: 353,78
+[13.33.34.163]motion direciton: 25.2534,43.154
+[13.33.34.163]direction down cnt: 0
+[13.33.34.301]status:2
+[13.33.34.301]fps:18
+[13.33.34.301]motion percent: 4.84492
+[13.33.34.302]motion center: 354,81
+[13.33.34.302]motion direciton: 43.2756,25.0444
+[13.33.34.303]direction down cnt: 0
+[13.33.34.442]status:2
+[13.33.34.443]fps:18
+[13.33.34.445]motion percent: 1.89584
+[13.33.34.445]motion center: 342,74
+[13.33.34.445]motion direciton: 41.963,27.1864
+[13.33.34.446]direction down cnt: 0
+[13.33.34.582]status:2
+[13.33.34.582]fps:18
+[13.33.34.583]motion percent: 2.26266
+[13.33.34.583]motion center: 275,63
+[13.33.34.583]motion direciton: -3.81925,-49.8539
+[13.33.34.584]direction down cnt: 0
+[13.33.34.722]status:2
+[13.33.34.722]fps:18
+[13.33.34.723]motion percent: 4.08223
+[13.33.34.723]motion center: 279,71
+[13.33.34.724]motion direciton: -33.6972,-36.9392
+[13.33.34.724]direction down cnt: 0
+[13.33.34.863]status:2
+[13.33.34.863]fps:18
+[13.33.34.864]motion percent: 7.00588
+[13.33.34.864]motion center: 280,79
+[13.33.34.864]motion direciton: 40.6745,-29.0789
+[13.33.34.865]direction down cnt: 0
+[13.33.35.4]status:2
+[13.33.35.4]fps:18
+[13.33.35.4]motion percent: 6.34851
+[13.33.35.6]motion center: 272,75
+[13.33.35.6]motion direciton: 36.7476,-33.906
+[13.33.35.6]direction down cnt: 0
+[13.33.35.146]status:2
+[13.33.35.146]fps:18
+[13.33.35.147]motion percent: 4.88487
+[13.33.35.147]motion center: 272,89
+[13.33.35.147]motion direciton: 33.312,-37.2869
+[13.33.35.147]direction down cnt: 0
+[13.33.35.284]status:2
+[13.33.35.285]fps:18
+[13.33.35.285]motion percent: 5.00835
+[13.33.35.286]motion center: 271,95
+[13.33.35.286]motion direciton: 46.8482,-17.4712
+[13.33.35.286]direction down cnt: 0
+[13.33.35.428]status:2
+[13.33.35.428]fps:17
+[13.33.35.429]motion percent: 4.51442
+[13.33.35.430]motion center: 275,100
+[13.33.35.431]motion direciton: 45.4682,20.8001
+[13.33.35.431]direction down cnt: 0
+[13.33.35.583]status:2
+[13.33.35.583]fps:18
+[13.33.35.583]motion percent: 7.89569
+[13.33.35.584]motion center: 275,94
+[13.33.35.584]motion direciton: 28.3903,41.1581
+[13.33.35.584]direction down cnt: 0
+[13.33.35.724]status:2
+[13.33.35.724]fps:17
+[13.33.35.724]motion percent: 9.39202
+[13.33.35.725]motion center: 271,80
+[13.33.35.725]motion direciton: 29.1013,40.6585
+[13.33.35.725]direction down cnt: 0
+[13.33.35.866]status:2
+[13.33.35.866]fps:17
+[13.33.35.867]motion percent: 12.6208
+[13.33.35.867]motion center: 275,81
+[13.33.35.868]motion direciton: 32.3355,38.1368
+[13.33.35.869]direction down cnt: 0
+[13.33.36.6]status:2
+[13.33.36.6]fps:18
+[13.33.36.7]motion percent: 14.0699
+[13.33.36.7]motion center: 277,85
+[13.33.36.8]motion direciton: 26.6657,42.2958
+[13.33.36.8]direction down cnt: 0
+[13.33.36.146]status:2
+[13.33.36.147]fps:17
+[13.33.36.148]motion percent: 13.6595
+[13.33.36.148]motion center: 276,91
+[13.33.36.148]motion direciton: 31.986,38.4304
+[13.33.36.148]direction down cnt: 0
+[13.33.36.285]status:2
+[13.33.36.286]fps:17
+[13.33.36.287]motion percent: 13.5324
+[13.33.36.287]motion center: 278,94
+[13.33.36.287]motion direciton: 30.3902,39.7044
+[13.33.36.287]direction down cnt: 0
+[13.33.36.427]status:2
+[13.33.36.427]fps:17
+[13.33.36.427]motion percent: 15.1231
+[13.33.36.428]motion center: 282,99
+[13.33.36.428]motion direciton: 29.3995,40.4434
+[13.33.36.429]direction down cnt: 0
+[13.33.36.567]status:2
+[13.33.36.567]fps:18
+[13.33.36.569]motion percent: 14.2406
+[13.33.36.569]motion center: 283,104
+[13.33.36.569]motion direciton: 33.1471,37.4335
+[13.33.36.570]direction down cnt: 1
+[13.33.36.707]status:2
+[13.33.36.708]fps:17
+[13.33.36.708]motion percent: 15.8241
+[13.33.36.709]

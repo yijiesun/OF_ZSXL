@@ -25,6 +25,8 @@ using namespace cv;
 //视频opticalFlowFarnebackProcess类，继承自帧处理基类
 class PROCESS_FYGQ : public FrameProcessor {
 public:
+	DEBUG db;
+	bool DEBUG;
 	Size orgFrameSize;
 	float frame_downsampling_percent;
 	int continues_frame_goal_cnt;
@@ -47,16 +49,36 @@ public:
 	Mat gray_prev, gray_prev_roi, output_roi;  //之前的灰度图
 
 	PROCESS_FYGQ() {};
-	void init() {
+	void configInit() {
+		arrow_down_cnt = 0;
+		status = 0;
+		point_num = 0;
+		DEBUG = false;
+
 		Config cfg("..//config.txt");
+		string logFile = "..//log//";
+
 		continues_frame_goal_cnt = (int)cfg.get_param("continues_frame_goal_cnt");
 		frame_downsampling_percent = cfg.get_param("frame_downsampling_percent");
-		cout << "\n***********parameter***********\n" << endl;
-		cout << "frame_downsampling_percent:" << frame_downsampling_percent << endl;
-		cout << "continues_frame_goal_cnt:" << continues_frame_goal_cnt << endl;
-		
+		DEBUG = (bool)cfg.get_param("debug");
+
+		if (DEBUG)
+		{
+			logFile += getCurrentDate();
+			db.setup(logFile+".txt");
+			db.outVideoFile = logFile + ".avi";
+			db.writeAndShowLog("***********FYQG starting***********");
+			db.writeAndShowLog("***********parameter***********");
+			db.writeAndShowLog("frame_downsampling_percent: ",frame_downsampling_percent);
+			db.writeAndShowLog("continues_frame_goal_cnt: ", continues_frame_goal_cnt);
+		}
+
 	}
 	void process(Mat &frame, Mat &output) {
+		double first_time, last_time;
+		int fps;
+		first_time = what_time_is_it_now_s();
+
 		//得到灰度图
 		cvtColor(frame, gray, CV_BGR2GRAY);
 		frame.copyTo(output);
@@ -116,7 +138,7 @@ public:
 		//flowsum_tmp = flowsum - 1.0f;
 		int flow_non_zero_cnt = countNonZero(flowsum_tmp);
 		float flow_per = (float)flow_non_zero_cnt / roi_area_size*100.0f;
-		cout << "-- " << flow_per << endl;
+
 		threshold(flowsum, flowsum, MIN_FLOW_TENSOR, 255, CV_THRESH_BINARY);
 		//threshold(flowsum, flowsum, 1.0f, 255, CV_THRESH_BINARY);
 
@@ -148,8 +170,11 @@ public:
 				track_priv_cur[0] = track_priv_cur[1];
 			}
 			track_priv_cur[1] = Point(x + cur_pt_lu_rd[0].x, y + cur_pt_lu_rd[0].y);
-			if (getDistance(track_priv_cur[0], track_priv_cur[1]) > gray_prev_roi.cols / MAX_TRACK_DIS)
+			double dis = getDistance(track_priv_cur[0], track_priv_cur[1]);
+			if (dis > gray_prev_roi.cols / MAX_TRACK_DIS * 2)
 				track_priv_cur[1] = track_priv_cur[0];
+			else if (dis > gray_prev_roi.cols / MAX_TRACK_DIS)
+				track_priv_cur[1] = Point((track_priv_cur[1].x+ track_priv_cur[0].x)/2.0, (track_priv_cur[1].y + track_priv_cur[0].y) / 2.0);
 
 #ifdef DRAW_TRACK
 			line(track_line, track_priv_cur[0], track_priv_cur[1], CV_RGB(155, 155, 0), 1, 8);
@@ -190,6 +215,12 @@ public:
 				status = 3;
 			}
 		}
+
+		last_time = what_time_is_it_now_s();
+		fps = static_cast<int>(1.0 / (last_time - first_time)+0.5);
+		if (DEBUG)
+			db.writeVidFrame(output);
+
 		if(frame_downsampling_percent!=1)
 			resize(output, output, orgFrameSize);
 		if (status == 1)
@@ -223,7 +254,6 @@ public:
 		}
 		else if (status == 3)
 		{
-			cout << "成绩合格！" << endl;
 			string txt2 = "红色A窗口检测成功";
 			string txt3 = "蓝色B窗口检测成功";
 			string txt4 = "成绩合格！";
@@ -232,6 +262,18 @@ public:
 			putTextZH(output, txt4.c_str(), Point(20, 200), CV_RGB(255, 0, 0), 60, "华文正楷");
 
 		}
+		if (DEBUG)
+		{
+			db.writeAndShowLog("status:", status);
+			db.writeAndShowLog("fps:", fps);
+			db.writeAndShowLog("motion percent: ", flow_per);
+			db.writeAndShowLog("motion center: ", fp2string(x + cur_pt_lu_rd[0].x) + "," + fp2string(y + cur_pt_lu_rd[0].y));
+			db.writeAndShowLog("motion direciton: ", fp2string(flow_sum[0]) + "," + fp2string(flow_sum[1]));
+			db.writeAndShowLog("direction down cnt: ", fp2string(arrow_down_cnt));
+		}
+		
+		putText(output, getCurrentDate().c_str(), Point(20, 20), FONT_HERSHEY_COMPLEX, 0.5, CV_RGB(255, 0, 0), 1, 0);
+		putText(output, int2string(fps).c_str(), Point(20, 50), FONT_HERSHEY_COMPLEX, 0.5, CV_RGB(255, 0, 0), 1, 0);
 		string txt24 = "规则:\n1,在红色A窗口中检测到连续向下的光流矢量\n2,满足条件1后启动窗口B检测，\nB窗口检测到连续向下的光流矢量\n并且质心在B窗口中";
 		string txtc = fp2string(max(cur_pt[0].x, cur_pt[3].x)) + "," + fp2string(max(cur_pt[0].y, cur_pt[3].y));
 		putTextZH(output, txt24.c_str(), Point(20, 400), CV_RGB(255, 0, 0), 15, "华文正楷");
@@ -259,7 +301,7 @@ public:
 		{
 			firstFrame.copyTo(firstFrameDraw);
 			cur_pt[int(point_num % 4)] = Point(x, y);
-
+			if (DEBUG) db.writeAndShowLog("set point: ", int2string(x)+","+ int2string(y));
 			for (int i = 0; i < 4; i++)
 			{
 				char temp_1[20];
@@ -273,11 +315,8 @@ public:
 		}
 	}
 
-	void setup(Mat &frame)
+	void draw4Points(Mat &frame)
 	{
-		arrow_down_cnt = 0;
-		status = 0;
-		point_num = 0;
 		frame.copyTo(firstFrame);
 
 		mask = Mat::zeros(firstFrame.size(), CV_8UC1);
@@ -296,9 +335,8 @@ public:
 			}
 
 		}
-
-		cout << "ROI:" << cur_pt[3].x - cur_pt[0].x << endl;
 		quadrilateralVertexSort(cur_pt);
+		if (DEBUG) db.writeAndShowLog("flow ROI size: ", int2string(cur_pt[3].x - cur_pt[0].x)+"X"+ int2string(cur_pt[1].y - cur_pt[0].y));
 		LC_POINT.x = min(cur_pt[0].x, cur_pt[1].x) + cvRound(abs(cur_pt[0].x - cur_pt[1].x) / 2.0);
 		LC_POINT.y = min(cur_pt[0].y, cur_pt[1].y) + cvRound(abs(cur_pt[0].y - cur_pt[1].y) / 2.0);
 		RC_POINT.x = min(cur_pt[2].x, cur_pt[3].x) + cvRound(abs(cur_pt[2].x - cur_pt[3].x) / 2.0);
@@ -336,21 +374,30 @@ void RUN_FYGQ()
 	cout << "\n\n\n************翻越高墙子系统启动成功！************\n"<<endl;
 	VideoProcessor processor;
 	PROCESS_FYGQ fygq_process;
-	fygq_process.init();
 	//打开输入视频
 	//processor.setInput("F:\\video_dataset\\test1.avi");
 	processor.setInput("E:\\SIMIT\\2020_new_project\\zsxl\\dataset\\fgq.avi");
 	//processor.setOutput("E:\\SIMIT\\2020_new_project\\zsxl\\dataset\\result\\OF_ZSXL_FGQ.mp4.avi");
 	processor.displayOutput("rlt");
-	processor.setDownsamplingPercent(fygq_process.frame_downsampling_percent);
+	
 	fygq_process.orgFrameSize = processor.getFrameSize();
 	//设置每一帧的延时
 	processor.setDelay(1000. / processor.getFrameRate());
+
+	fygq_process.configInit();
+	processor.setDownsamplingPercent(fygq_process.frame_downsampling_percent);
+
+	if (fygq_process.DEBUG) 
+		fygq_process.db.setVideoOutput(processor.getCodec(), processor.getFrameRate(), 1,processor.getFrameSize(false));
+
 	//设置帧处理函数，可以任意
 	processor.setFrameProcessor(&fygq_process);
 	Mat frame;
 	processor.readNextFrame(frame, false);
-	fygq_process.setup(frame);
+
+	fygq_process.draw4Points(frame);
+
 	processor.run_syj();
-	int aaa = 0;
+
+	if(fygq_process.DEBUG) fygq_process.db.close();
 }

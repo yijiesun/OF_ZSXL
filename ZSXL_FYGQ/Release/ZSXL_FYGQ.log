@@ -1,26 +1,20 @@
-﻿  functions.cpp
-..\include\functions.cpp(18): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-..\include\functions.cpp(20): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-  PROCESS_FYGQ.cpp
-..\process\PROCESS_FYGQ.cpp(112): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-..\process\PROCESS_FYGQ.cpp(113): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-..\process\PROCESS_FYGQ.cpp(119): warning C4018: “<”: 有符号/无符号不匹配
-..\process\PROCESS_FYGQ.cpp(120): warning C4018: “<”: 有符号/无符号不匹配
-..\process\PROCESS_FYGQ.cpp(146): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-..\process\PROCESS_FYGQ.cpp(186): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-..\process\PROCESS_FYGQ.cpp(187): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-..\process\PROCESS_FYGQ.cpp(188): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+﻿  PROCESS_FYGQ.cpp
+..\process\PROCESS_FYGQ.cpp(125): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+..\process\PROCESS_FYGQ.cpp(126): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+..\process\PROCESS_FYGQ.cpp(132): warning C4018: “<”: 有符号/无符号不匹配
+..\process\PROCESS_FYGQ.cpp(133): warning C4018: “<”: 有符号/无符号不匹配
+..\process\PROCESS_FYGQ.cpp(159): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+..\process\PROCESS_FYGQ.cpp(199): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+..\process\PROCESS_FYGQ.cpp(200): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
 ..\process\PROCESS_FYGQ.cpp(201): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-..\process\PROCESS_FYGQ.cpp(202): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-..\process\PROCESS_FYGQ.cpp(203): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-..\process\PROCESS_FYGQ.cpp(222): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-..\process\PROCESS_FYGQ.cpp(332): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+..\process\PROCESS_FYGQ.cpp(214): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+..\process\PROCESS_FYGQ.cpp(215): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+..\process\PROCESS_FYGQ.cpp(216): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+..\process\PROCESS_FYGQ.cpp(236): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+..\process\PROCESS_FYGQ.cpp(348): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
   PROCESS_MAIN.cpp
   main.cpp
-  正在生成代码
-  351 of 478 functions (73.4%) were compiled, the rest were copied from previous compilation.
-    8 functions were new in current compilation
-    23 functions had inline decision re-evaluated but remain unchanged
-  已完成代码的生成
-  ZSXL_FYGQ.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Release\ZSXL_FYGQ.exe
-  ZSXL_FYGQ.vcxproj -> E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Release\ZSXL_FYGQ.pdb (Full PDB)
+PROCESS_FYGQ.obj : error LNK2001: 无法解析的外部符号 "public: float __thiscall Config::get_param(char *)" (?get_param@Config@@QAEMPAD@Z)
+PROCESS_FYGQ.obj : error LNK2001: 无法解析的外部符号 "public: __thiscall Config::~Config(void)" (??1Config@@QAE@XZ)
+PROCESS_FYGQ.obj : error LNK2001: 无法解析的外部符号 "public: __thiscall Config::Config(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Config@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+E:\SIMIT\2020_new_project\zsxl\OF_ZSXL\Release\ZSXL_FYGQ.exe : fatal error LNK1120: 3 个无法解析的外部命令
