@@ -60,15 +60,15 @@ include CMakeFiles/ZSXL.dir/flags.make
 CMakeFiles/ZSXL.dir/src/main.cpp.o: CMakeFiles/ZSXL.dir/flags.make
 CMakeFiles/ZSXL.dir/src/main.cpp.o: ../src/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/syj/zsxl/OF_ZSXL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ZSXL.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/main.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/main.cpp
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/main.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/main.cpp
 
 CMakeFiles/ZSXL.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZSXL.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/main.cpp > CMakeFiles/ZSXL.dir/src/main.cpp.i
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/main.cpp > CMakeFiles/ZSXL.dir/src/main.cpp.i
 
 CMakeFiles/ZSXL.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZSXL.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/main.cpp -o CMakeFiles/ZSXL.dir/src/main.cpp.s
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/main.cpp -o CMakeFiles/ZSXL.dir/src/main.cpp.s
 
 CMakeFiles/ZSXL.dir/src/main.cpp.o.requires:
 
@@ -84,15 +84,15 @@ CMakeFiles/ZSXL.dir/src/main.cpp.o.provides.build: CMakeFiles/ZSXL.dir/src/main.
 CMakeFiles/ZSXL.dir/src/include/config.cpp.o: CMakeFiles/ZSXL.dir/flags.make
 CMakeFiles/ZSXL.dir/src/include/config.cpp.o: ../src/include/config.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/syj/zsxl/OF_ZSXL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ZSXL.dir/src/include/config.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/include/config.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/include/config.cpp
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/include/config.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/include/config.cpp
 
 CMakeFiles/ZSXL.dir/src/include/config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZSXL.dir/src/include/config.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/include/config.cpp > CMakeFiles/ZSXL.dir/src/include/config.cpp.i
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/include/config.cpp > CMakeFiles/ZSXL.dir/src/include/config.cpp.i
 
 CMakeFiles/ZSXL.dir/src/include/config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZSXL.dir/src/include/config.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/include/config.cpp -o CMakeFiles/ZSXL.dir/src/include/config.cpp.s
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/include/config.cpp -o CMakeFiles/ZSXL.dir/src/include/config.cpp.s
 
 CMakeFiles/ZSXL.dir/src/include/config.cpp.o.requires:
 
@@ -108,15 +108,15 @@ CMakeFiles/ZSXL.dir/src/include/config.cpp.o.provides.build: CMakeFiles/ZSXL.dir
 CMakeFiles/ZSXL.dir/src/include/functions.cpp.o: CMakeFiles/ZSXL.dir/flags.make
 CMakeFiles/ZSXL.dir/src/include/functions.cpp.o: ../src/include/functions.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/syj/zsxl/OF_ZSXL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ZSXL.dir/src/include/functions.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/include/functions.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/include/functions.cpp
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/include/functions.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/include/functions.cpp
 
 CMakeFiles/ZSXL.dir/src/include/functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZSXL.dir/src/include/functions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/include/functions.cpp > CMakeFiles/ZSXL.dir/src/include/functions.cpp.i
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/include/functions.cpp > CMakeFiles/ZSXL.dir/src/include/functions.cpp.i
 
 CMakeFiles/ZSXL.dir/src/include/functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZSXL.dir/src/include/functions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/include/functions.cpp -o CMakeFiles/ZSXL.dir/src/include/functions.cpp.s
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/include/functions.cpp -o CMakeFiles/ZSXL.dir/src/include/functions.cpp.s
 
 CMakeFiles/ZSXL.dir/src/include/functions.cpp.o.requires:
 
@@ -132,15 +132,15 @@ CMakeFiles/ZSXL.dir/src/include/functions.cpp.o.provides.build: CMakeFiles/ZSXL.
 CMakeFiles/ZSXL.dir/src/include/putText.cpp.o: CMakeFiles/ZSXL.dir/flags.make
 CMakeFiles/ZSXL.dir/src/include/putText.cpp.o: ../src/include/putText.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/syj/zsxl/OF_ZSXL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ZSXL.dir/src/include/putText.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/include/putText.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/include/putText.cpp
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/include/putText.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/include/putText.cpp
 
 CMakeFiles/ZSXL.dir/src/include/putText.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZSXL.dir/src/include/putText.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/include/putText.cpp > CMakeFiles/ZSXL.dir/src/include/putText.cpp.i
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/include/putText.cpp > CMakeFiles/ZSXL.dir/src/include/putText.cpp.i
 
 CMakeFiles/ZSXL.dir/src/include/putText.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZSXL.dir/src/include/putText.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/include/putText.cpp -o CMakeFiles/ZSXL.dir/src/include/putText.cpp.s
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/include/putText.cpp -o CMakeFiles/ZSXL.dir/src/include/putText.cpp.s
 
 CMakeFiles/ZSXL.dir/src/include/putText.cpp.o.requires:
 
@@ -156,15 +156,15 @@ CMakeFiles/ZSXL.dir/src/include/putText.cpp.o.provides.build: CMakeFiles/ZSXL.di
 CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.o: CMakeFiles/ZSXL.dir/flags.make
 CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.o: ../src/process/PROCESS_FYGQ.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/syj/zsxl/OF_ZSXL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_FYGQ.cpp
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_FYGQ.cpp
 
 CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_FYGQ.cpp > CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.i
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_FYGQ.cpp > CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.i
 
 CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_FYGQ.cpp -o CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.s
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_FYGQ.cpp -o CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.s
 
 CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.o.requires:
 
@@ -180,15 +180,15 @@ CMakeFiles/ZSXL.dir/src/process/PROCESS_FYGQ.cpp.o.provides.build: CMakeFiles/ZS
 CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.o: CMakeFiles/ZSXL.dir/flags.make
 CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.o: ../src/process/PROCESS_MAIN.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/syj/zsxl/OF_ZSXL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_MAIN.cpp
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.o -c /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_MAIN.cpp
 
 CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_MAIN.cpp > CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.i
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_MAIN.cpp > CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.i
 
 CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_MAIN.cpp -o CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.s
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/syj/zsxl/OF_ZSXL/src/process/PROCESS_MAIN.cpp -o CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.s
 
 CMakeFiles/ZSXL.dir/src/process/PROCESS_MAIN.cpp.o.requires:
 
